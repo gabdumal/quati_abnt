@@ -31,5 +31,7 @@
   user-print-title: print_title,
   entry,
 ) => context {
-  print_title(entry)
+  if glossarium.count-refs(entry.key) != 0 {
+    print_title(entry)
+  }
 }
