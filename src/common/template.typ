@@ -1,7 +1,6 @@
 #import "./components/bibliography.typ": format_bibliography
 #import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
-#import "./components/note.typ": set_default_notes
 #import "./components/page.typ": (
   consider_only_odd_pages as consider_only_odd_pages_state, format_header, should_count_this_page,
   should_number_this_page,
@@ -127,9 +126,6 @@
   show bibliography: it => {
     format_bibliography(it)
   }
-
-  // ## Notes. Notas.
-  set_default_notes
 
   doc
 }

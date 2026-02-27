@@ -14,7 +14,7 @@
     }
   },
   "dockerComposeFile": "../compose.yml",
-  "name": "abntypst",
+  "name": "abntyp",
   "postCreateCommand": "utpm workspace link && typst --version && utpm --version",
   // Connect as root (matches compose user)
   "remoteUser": "root",
