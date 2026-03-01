@@ -1,4 +1,4 @@
-// # List entry. Entrada em lista.
+// # Entry on simple glossary list. Entrada em lista simples de glossário.
 
 #import "../style/style.typ": spacing_for_common_text
 #import "../packages.typ": glossarium
@@ -9,7 +9,7 @@
     grid(
       columns: (1fr, 4fr),
       column-gutter: spacing_for_common_text,
-      align: bottom,
+      align: top,
 
       strong(entry.short), entry.long,
     )

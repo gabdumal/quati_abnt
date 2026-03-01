@@ -1,7 +1,7 @@
 // # List of abbreviations. Lista de abreviaturas e siglas.
 // NBR 14724:2024 4.2.1.11
 
-#import "../components/list_entry.typ": print_gloss
+#import "../components/entry_on_simple_glossary_lists.typ": print_gloss
 #import "./glossary.typ": include_glossary
 
 #let include_list_of_abbreviations(

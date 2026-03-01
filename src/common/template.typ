@@ -15,8 +15,11 @@
 
 #let template(
   doc,
-  // Whether to  print content on the back of pages — required.
+  // Color to format links.
+  color_of_links: none,
+  // Whether to print content on the back of pages.
   consider_only_odd_pages: true,
+  // Whether to number pages and print its number on the header.
   number_pages: false,
 ) = {
   consider_only_odd_pages_state.update(consider_only_odd_pages)
@@ -67,6 +70,26 @@
     spacing: spacing_for_common_text,
     justify: true,
   )
+
+  // ## Links. Ligações.
+  show link: it => {
+    if (color_of_links != none) {
+      set text(fill: color_of_links)
+      it
+    } else {
+      it
+    }
+  }
+
+  // ## References. Referências.
+  show ref: it => {
+    if (color_of_links != none) {
+      set text(fill: color_of_links)
+      it
+    } else {
+      it
+    }
+  }
 
   // ## Headings. Títulos.
 

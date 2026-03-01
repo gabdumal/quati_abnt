@@ -2,7 +2,7 @@
 // NBR 14724:2024 4.2.1.10
 
 #import "../style/style.typ": font_family_sans
-#import "./outline_entry.typ": format_outline_entry
+#import "entry_on_outline_lists.typ": format_outline_entry
 
 #let list_of_tables() = {
   set text(

@@ -24,6 +24,7 @@
   set text(
     font: font_family_sans,
   )
+  set par(first-line-indent: 0pt)
   block(
     breakable: false,
     clip: true,
@@ -31,8 +32,6 @@
     radius: 6pt,
     stroke: stroke,
     width: width,
-
-    // [#it,#prefix],
 
     grid(
       rows: 2,
@@ -204,7 +203,7 @@
     arguments: arguments,
     color: oklch(91.95%, 0.117, 93.14deg),
     margin: margin,
-    prefix_text: text(lang: "en", "TODO"),
+    prefix_text: text(lang: "en", "AFAZER"),
     prefix: prefix,
     it,
   )
@@ -218,9 +217,9 @@
 ) => {
   create_status_note(
     arguments: arguments,
-    color: oklch(89.63%, 0.147, 121.76deg),
+    color: oklch(90.73%, 0.142, 115.79deg),
     margin: margin,
-    prefix_text: text(lang: "en", "PROG"),
+    prefix_text: text(lang: "en", "PROGRESSO"),
     prefix: prefix,
     it,
   )
@@ -234,9 +233,41 @@
 ) => {
   create_status_note(
     arguments: arguments,
+    color: oklch(86.01%, 0.133, 160.73deg),
+    margin: margin,
+    prefix_text: text(lang: "en", "FEITO"),
+    prefix: prefix,
+    it,
+  )
+}
+
+#let open_discussion_note = (
+  arguments: (:),
+  margin: false,
+  prefix: none,
+  it,
+) => {
+  create_status_note(
+    arguments: arguments,
     color: oklch(83.99%, 0.084, 247.8deg),
     margin: margin,
-    prefix_text: text(lang: "en", "DONE"),
+    prefix_text: text(lang: "en", "ABERTO"),
+    prefix: prefix,
+    it,
+  )
+}
+
+#let closed_discussion_note = (
+  arguments: (:),
+  margin: false,
+  prefix: none,
+  it,
+) => {
+  create_status_note(
+    arguments: arguments,
+    color: oklch(79.24%, 0.035, 246.88deg),
+    margin: margin,
+    prefix_text: text(lang: "en", "FECHADO"),
     prefix: prefix,
     it,
   )

@@ -2,11 +2,12 @@
 
 #let template(
   doc,
-  // Whether to  print content on the back of pages — required.
+  color_of_links: none,
   consider_only_odd_pages: true,
   number_pages: false,
 ) = {
   // ## Headings. Títulos.
+  // TODO: Check whether these names must be lowercase
   show heading.where(level: 1): set heading(supplement: [Capítulo])
   show heading.where(level: 2): set heading(supplement: [Seção])
   show heading.where(level: 3): set heading(supplement: [Subseção])
@@ -15,6 +16,7 @@
 
   common_template(
     doc,
+    color_of_links: color_of_links,
     consider_only_odd_pages: consider_only_odd_pages,
     number_pages: number_pages,
   )
