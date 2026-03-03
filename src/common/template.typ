@@ -107,6 +107,15 @@
     )
   }
 
+  // ## Figures. Figuras.
+  // NBR 14724:2024 5.8
+  set figure.caption(
+    // The caption of a figure should be on top of the figure
+    position: top,
+    // The indicator and numbering of the figure should be separated by a em-dash from the following caption text
+    separator: [ #sym.dash.em ],
+  )
+
   // ## Quotes. Citações.
   // NBR 10520:2023 7.1.1
   show quote: it => {
@@ -124,7 +133,7 @@
     gap: simple_leading_for_smaller_text,
     clearance: simple_spacing_for_smaller_text,
     separator: line(length: 5cm),
-    indent: 0em,
+    indent: 0cm,
   )
   show footnote.entry: it => {
     format_footnote_entry(it)

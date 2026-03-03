@@ -38,7 +38,7 @@
           // Keywords are separated by semicolons and end with a period.
           // Keywords are not capitalized.
           #par(
-            first-line-indent: 0em,
+            first-line-indent: 0cm,
           )[
             #text(weight: "bold")[#keywords_title:]
             #keywords.join("; ").

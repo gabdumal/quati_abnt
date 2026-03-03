@@ -8,7 +8,7 @@
 #let include_custom_cataloging_in_publication(
   body,
 ) = context {
-  set page(margin: 0em)
+  set page(margin: 0cm)
   set text(font: font_family_sans)
   not_number_page(
     not_start_on_new_page()[

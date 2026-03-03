@@ -5,7 +5,9 @@
   font_size_for_common_text, font_size_for_smaller_text, leading_for_common_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_common_text,
 )
-#import "./information_footer.typ": information_footer
+#import "figure_footer.typ": figure_footer
+
+#let spacing_around_figure = spacing_for_common_text * 2
 
 #let format_caption_of_figure(
   width: auto,
@@ -20,9 +22,7 @@
     leading: leading_for_common_text,
     spacing: spacing_for_common_text,
   )
-
-  // The indicator and numbering of the figure should be separated by a em-dash from the following caption text.
-  [#it.supplement #it.counter.display() #sym.dash.em #it.body]
+  it
 }
 
 #let format_information_of_figure(
@@ -32,7 +32,7 @@
   // NBR 14724:2024 5.8
   // Source and notes should be in a smaller font size
   set par(
-    first-line-indent: 0em,
+    first-line-indent: 0cm,
     leading: simple_leading_for_smaller_text,
     spacing: simple_spacing_for_smaller_text,
   )
@@ -46,7 +46,10 @@
     above: simple_spacing_for_smaller_text,
     below: simple_spacing_for_smaller_text,
   )[
-    #information_footer(note: note, source: source)
+    #figure_footer(
+      note: note,
+      source: source,
+    )
   ]
 }
 
@@ -139,7 +142,15 @@
 
     set block(breakable: true)
     if placement == none {
-      formatted_figure
+      let space_around = v(
+        weak: true,
+        spacing_around_figure,
+      )
+      {
+        space_around
+        formatted_figure
+        space_around
+      }
     } else {
       let alignment = if (
         placement == auto
@@ -151,9 +162,8 @@
         panic("Placement should be one of the following options: none, auto, top, bottom")
       }
 
-      set block(breakable: true)
       place(
-        clearance: spacing_for_common_text,
+        clearance: spacing_around_figure,
         float: true,
         alignment,
         formatted_figure,

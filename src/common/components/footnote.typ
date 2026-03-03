@@ -10,7 +10,7 @@
 
   grid(
     columns: 2,
-    gutter: 0.25em,
+    gutter: 3pt,
     body.note, body.note.body,
   )
 }

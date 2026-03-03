@@ -1,5 +1,5 @@
 // # Cataloging-in-publication. Ficha catalográfica.
-// NBR 14724:2024 4.2.1.1.2
+// NBR 14724:2024 4.2.1.1.2.
 
 #import "../../../common/components/advisors.typ": get_advisor_role
 #import "../../../common/components/heading.typ": not_start_on_new_page

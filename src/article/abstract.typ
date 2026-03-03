@@ -12,7 +12,7 @@
   title: { "Resumo" },
   content: { "Conteúdo do resumo." },
 ) = {
-  set par(first-line-indent: 0em)
+  set par(first-line-indent: 0cm)
   align(left)[
     #set text(
       size: font_size_for_common_text,
