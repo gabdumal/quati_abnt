@@ -5,9 +5,11 @@
     "abnTeX2",
     "abntyp",
     "alice",
+    "biblatex",
     "dumont",
     "gabriel",
     "glossarium",
+    "hayagriva",
     "Ismália",
     "malosto",
     "oklch",
@@ -20,5 +22,15 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "latex-workshop.bibtex-fields.sort.enabled": true,
   "latex-workshop.bibtex-format.sort.enabled": false,
-  "latex-workshop.bibtex-format.trailingComma": true
+  "latex-workshop.bibtex-format.trailingComma": true,
+  "chat.tools.terminal.autoApprove": {
+    "/^python3 scripts/gen_prose_csl\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^python3 /workspace/scripts/gen_prose_csl\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
 }

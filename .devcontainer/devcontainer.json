@@ -7,11 +7,11 @@
         "James-Yu.latex-workshop",
         "mhutchie.git-graph",
         "myriad-dreamin.tinymist",
+        "redhat.vscode-xml",
         "redhat.vscode-yaml",
         "streetsidesoftware.code-spell-checker-portuguese-brazilian",
         "streetsidesoftware.code-spell-checker",
-        "tamasfe.even-better-toml",
-        "redhat.vscode-xml"
+        "tamasfe.even-better-toml"
       ]
     }
   },
