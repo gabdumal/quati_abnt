@@ -9,6 +9,3 @@
 
 // ## Equations. Equações.
 #import "@preview/equate:0.3.2" /* From 0.3.2 */ as equate
-
-// ## Notes. Notas.
-#import "@preview/drafting:0.2.2" /* From 0.2.2 */ as drafting

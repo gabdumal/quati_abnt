@@ -5,6 +5,7 @@
   color_of_links: none,
   consider_only_odd_pages: true,
   number_pages: false,
+  should_display_editor_notes: true,
 ) = {
   // ## Headings. Títulos.
   // TODO: Check whether these names must be lowercase
@@ -19,5 +20,6 @@
     color_of_links: color_of_links,
     consider_only_odd_pages: consider_only_odd_pages,
     number_pages: number_pages,
+    should_display_editor_notes: should_display_editor_notes,
   )
 }

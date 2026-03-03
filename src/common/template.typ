@@ -1,4 +1,5 @@
 #import "./components/bibliography.typ": format_bibliography
+#import "./components/editor_note.typ": should_display_editor_notes as should_display_editor_notes_state
 #import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
 #import "./components/page.typ": (
@@ -6,7 +7,7 @@
   should_number_this_page,
 )
 #import "./components/quote.typ": format_quote
-#import "./packages.typ": drafting, subpar
+#import "./packages.typ": subpar
 #import "./style/style.typ": (
   font_family_math, font_family_mono, font_family_sans, font_family_serif, font_size_for_common_text,
   font_size_for_smaller_text, leading_for_common_text, margin_bottom, margin_end, margin_start, margin_top, paper_size,
@@ -21,8 +22,11 @@
   consider_only_odd_pages: true,
   // Whether to number pages and print its number on the header.
   number_pages: false,
+  // Whether to display editor notes.
+  should_display_editor_notes: true,
 ) = {
   consider_only_odd_pages_state.update(consider_only_odd_pages)
+  should_display_editor_notes_state.update(should_display_editor_notes)
 
   // ## Page. Página.
   // NBR 14724:2024 5.1
