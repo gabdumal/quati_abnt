@@ -39,8 +39,10 @@
 
           let inner = if capitalize { upper(it.inner()) } else { it.inner() }
 
+          // NBR 14724:2024 5.2.2.
+          // Headings must have a blank space of 1.5 above and below.
           block(
-            below: spacing_around,
+            below: spacing_around * 2,
           )[
             #link(
               it.element.location(),

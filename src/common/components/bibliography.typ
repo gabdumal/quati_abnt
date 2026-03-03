@@ -10,3 +10,18 @@
   )
   body
 }
+
+// ## Prose citation. Citação em prosa.
+// NBR 10520:2023.
+// Esta função usa um estilo CSL dedicado que formata os autores com vírgulas e "e" antes do último (ex.: Silva, Souza e Oliveira), adequado ao corpo do texto.
+#let cite_prose(
+  supplement: none,
+  key,
+) = {
+  cite(
+    form: "prose",
+    supplement: supplement,
+    style: "../style/bibliography_style_prose.csl",
+    key,
+  )
+}

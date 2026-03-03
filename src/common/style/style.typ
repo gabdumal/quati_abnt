@@ -49,7 +49,7 @@
 //
 // ### Bibliography. Bibliografia.
 // NBR 6023:2025 6.3.
-// There must be a white space of 1 simple line between bibliography entries.
+// There must be a blank space of 1 simple line between bibliography entries.
 #let spacing_for_bibliography = font_size_for_common_text * spacing_of_one * 2
 
 // ## Leading. Entrelinha.

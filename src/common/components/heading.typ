@@ -122,7 +122,8 @@
     }
   ]
 
-  // Headings should have 1.5x of spacing above and below.
+  // NBR 14724:2024 5.2.2.
+  // Headings must have a blank space of 1.5 above and below.
   let space_around = v(spacing * 2, weak: true)
 
   space_around

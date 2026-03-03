@@ -1,5 +1,6 @@
 // # Components. Componentes.
 
+#import "./bibliography.typ": cite_prose
 #import "./epigraph.typ": epigraph
 #import "./equation.typ": equation
 #import "./figure.typ": describe_figure
