@@ -3,7 +3,6 @@
 #import "../style/style.typ": spacing_for_common_text
 #import "../packages.typ": glossarium
 
-
 #let print_title = entry => {
   (
     grid(

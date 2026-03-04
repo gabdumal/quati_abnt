@@ -38,7 +38,7 @@
   } else if body.level == 3 {
     font_weight = "bold"
     font_size = font_size_for_level_3_and_beyond_headings
-  } else if body.level == 4 {} else if body.level == 5 {
+  } else if body.level == 4 {} else if body.level >= 5 {
     text_style = "italic"
   }
 

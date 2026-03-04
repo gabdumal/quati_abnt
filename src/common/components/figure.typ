@@ -3,11 +3,9 @@
 
 #import "../style/style.typ": (
   font_size_for_common_text, font_size_for_smaller_text, leading_for_common_text, simple_leading_for_smaller_text,
-  simple_spacing_for_smaller_text, spacing_for_common_text,
+  simple_spacing_for_smaller_text, spacing_around_figure, spacing_for_common_text,
 )
 #import "figure_footer.typ": figure_footer
-
-#let spacing_around_figure = spacing_for_common_text * 2
 
 #let format_caption_of_figure(
   width: auto,
@@ -121,6 +119,18 @@
   )
 }
 
+#let figure_with_spacing_around = formatted_figure => {
+  let space_around = v(
+    weak: true,
+    spacing_around_figure,
+  )
+  {
+    space_around
+    formatted_figure
+    space_around
+  }
+}
+
 #let describe_figure(
   note: none,
   placement: none,
@@ -142,15 +152,7 @@
 
     set block(breakable: true)
     if placement == none {
-      let space_around = v(
-        weak: true,
-        spacing_around_figure,
-      )
-      {
-        space_around
-        formatted_figure
-        space_around
-      }
+      figure_with_spacing_around(formatted_figure)
     } else {
       let alignment = if (
         placement == auto

@@ -30,10 +30,10 @@
           )
 
           let prefix = it.prefix()
-          if it.element.supplement == [Apêndice] {
+          if it.element.supplement == "apêndice" {
             prefix = [APÊNDICE #prefix ---]
           }
-          if it.element.supplement == [Anexo] {
+          if it.element.supplement == "anexo" {
             prefix = [ANEXO #prefix ---]
           }
 

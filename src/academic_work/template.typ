@@ -8,12 +8,13 @@
   should_display_editor_notes: true,
 ) = {
   // ## Headings. Títulos.
-  // TODO: Check whether these names must be lowercase
-  show heading.where(level: 1): set heading(supplement: [Capítulo])
-  show heading.where(level: 2): set heading(supplement: [Seção])
-  show heading.where(level: 3): set heading(supplement: [Subseção])
-  show heading.where(level: 4): set heading(supplement: [Subsubseção])
-  show heading.where(level: 5): set heading(supplement: [Subsubsubseção])
+  // NBR 6024:2012.
+  show heading: set heading(
+    supplement: "Subseção",
+  )
+  show heading.where(level: 1): set heading(supplement: "Capítulo")
+  show heading.where(level: 2): set heading(supplement: "Seção")
+
 
   common_template(
     doc,

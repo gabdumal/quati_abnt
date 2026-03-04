@@ -11,6 +11,11 @@
 #let margin_start = 3.0cm
 #let margin_end = 2.0cm
 
+// ## Ident. Recuo.
+// NBR 6024:2012.
+#let indentation_for_paragraphs = 1.25cm
+#let indentation_for_subparagraphs = indentation_for_paragraphs
+
 // ## Font family. Família tipográfica.
 #let font_family_sans = "Liberation Sans"
 #let font_family_serif = "Liberation Serif"
@@ -76,3 +81,6 @@
 // NBR 6023:2025 6.3.
 // Leading of 1 must be used for bibliography.
 #let leading_for_bibliography = font_size_for_common_text * leading_of_one
+
+// ## Figures. Figuras.
+#let spacing_around_figure = spacing_for_common_text * 2

@@ -93,17 +93,16 @@ def transform(text: str) -> str:
         "                initialize-with=\". \"\n"
         "                delimiter=\"; \"\n"
         "                delimiter-precedes-last=\"always\"\n"
-        "            >",
+        "            >\n"
+        "                <name-part name=\"family\" text-case=\"capitalize-first\" />\n"
+        "                <name-part name=\"given\" />",
         "            <name\n"
         "                form=\"short\"\n"
         "                and=\"text\"\n"
-        "                name-as-sort-order=\"all\"\n"
-        "                sort-separator=\", \"\n"
-        "                initialize=\"false\"\n"
-        "                initialize-with=\". \"\n"
         "                delimiter=\", \"\n"
         "                delimiter-precedes-last=\"never\"\n"
-        "            >",
+        "            >\n"
+        "                <name-part name=\"family\" text-case=\"capitalize-first\" />",
     )
 
     # ------------------------------------------------------------------ #
@@ -140,10 +139,11 @@ def transform(text: str) -> str:
         "        </layout>",
         "        <layout prefix=\"\" suffix=\"\" delimiter=\"; \">\n"
         "            <group>\n"
-        "                <text macro=\"names-citation\" suffix=\" (\" />\n"
-        "                <text macro=\"date-year\" />\n"
-        "                <text macro=\"citation-locator\" prefix=\", \" />\n"
-        "                <text value=\")\" />\n"
+        "                <text macro=\"names-citation\" />\n"
+        "                <group prefix=\"(\" suffix=\")\">\n"
+        "                    <text macro=\"date-year\" />\n"
+        "                    <text macro=\"citation-locator\" prefix=\", \" />\n"
+        "                </group>\n"
         "            </group>\n"
         "        </layout>",
     )

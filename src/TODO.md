@@ -2,14 +2,14 @@
 
 - [ ] NBR 6022:2018 — Informação e documentação — Artigo em publicação periódica técnica e/ou científica — Apresentação
 - [p] NBR 6023:2025 — Informação e documentação — Referências — Elaboração
-- [ ] NBR 6024:2012 — Informação e documentação — Numeração progressiva das seções de um documento — Apresentação
+- [x] NBR 6024:2012 — Informação e documentação — Numeração progressiva das seções de um documento — Apresentação
 - [ ] NBR 6027:2012 — Informação e documentação — Sumário — Apresentação
 - [ ] NBR 6028:2021 — Informação e documentação — Resumo, resenha e recensão — Apresentação
 - [n] NBR 6029:2023 — Informação e documentação — Livros e folhetos — Apresentação
 - [ ] NBR 6034:2004 — Informação e documentação — Índice — Apresentação
 - [ ] NBR 10520:2023 — Informação e documentação — Citações em documentos — Apresentação
 - [ ] NBR 10719:2015 — Informação e documentação — Relatório técnico e/ou científico — Apresentação
-- [x] NBR 14724:2024 — Informação e documentação — Trabalhos acadêmicos — Apresentação
+- [f] NBR 14724:2024 — Informação e documentação — Trabalhos acadêmicos — Apresentação
 - [ ] NBR 15287:2025 — Informação e documentação — Projeto de pesquisa — Apresentação
 
 ## NBR 6022:2018 — Informação e documentação — Artigo em publicação periódica técnica e/ou científica — Apresentação — 2ª edição, 2018-05-16
@@ -59,7 +59,7 @@
 - [x] 6. Regras gerais de apresentação
 - [x] 7. Modelos de referências
 - [x] 8. Transcrição dos elementos
-- [p] 9. Ordenação das referências
+- [f] 9. Ordenação das referências
   - [x] 9.1. Sistema alfabético
   - [n] 9.2. Sistema numérico
 
@@ -67,30 +67,30 @@
 
 ### 4. Regras gerais
 
-- [ ] 4.1. Seções
+- [x] 4.1. Seções
   - [x] Algarismos
   - [x] Limite
   - [x] Alinhamento
-  - [ ] Títulos não numerados
+  - [x] Títulos não numerados
   - [x] Títulos com mais de uma linha
   - [x] Destaques da hierarquia
-- [ ] 4.2. Alínea
-  - [ ] Pontuação
-  - [ ] Numeração
-  - [ ] Alinhamento
-- [ ] 4.3. Subalínea
-  - [ ] Pontuação
-  - [ ] Alinhamento
-- [ ] 4.4 Indicativos
+- [x] 4.2. Alínea
+  - [x] Pontuação
+  - [x] Numeração
+  - [x] Alinhamento
+- [x] 4.3. Subalínea
+  - [x] Pontuação
+  - [x] Alinhamento
+- [x] 4.4 Indicativos
 
 ## NBR 6027:2012 — Informação e documentação — Sumário — Apresentação — 2ª edição, 2012-12-11
 
 - [ ] 4. Localização
-  - [p] 4.1. Em monografias
+  - [f] 4.1. Em monografias
     - [x] Verso e anverso
     - [n] Considerar toda a obra em volumes
   - [ ] 4.2. Em publicações periódicas
-- [p] 5. Estrutura
+- [f] 5. Estrutura
   - [x] Numeração — NBR 6024
   - [x] Alinhamento
   - [x] Grafia
@@ -131,11 +131,11 @@
 
 ### 4. Estrutura
 
-- [p] 4.1. Parte externa
+- [f] 4.1. Parte externa
   - [x] 4.1.1. Capa (obrigatório)
   - [n] 4.1.2. Lombada (opcional) — NBR 12225
-- [p] 4.2. Parte interna
-  - [p] 4.2.1. Elementos pré-textuais
+- [f] 4.2. Parte interna
+  - [x] 4.2.1. Elementos pré-textuais
     - [x] 4.2.1.1. Folha de rosto (obrigatório)
     - [x] 4.2.1.2. Errata (opcional)
     - [x] 4.2.1.3. Folha de aprovação (obrigatório)
@@ -153,7 +153,7 @@
     - [x] 4.2.1.12. Lista de símbolos (opcional)
     - [x] 4.2.1.13. Sumário (obrigatório) — NBR 6027
   - [x] 4.2.2. Elementos textuais
-  - [p] 4.2.3. Elementos pós-textuais
+  - [f] 4.2.3. Elementos pós-textuais
     - [x] 4.2.2.1. Referências (obrigatório) — NBR 6023
     - [x] 4.2.2.2. Glossário (opcional)
     - [x] 4.2.2.3. Apêndice (opcional)
@@ -179,7 +179,7 @@
     - [x] Verso e anverso
   - [x] 5.2.3. Títulos sem indicativo numérico
   - [x] 5.2.4. Elementos sem título e sem indicativo numérico
-- [p] 5.3. Paginação
+- [f] 5.3. Paginação
   - [x] Contagem
   - [x] Numeração
   - [n] Volumes

@@ -186,15 +186,10 @@
             <name
                 form="short"
                 and="text"
-                name-as-sort-order="all"
-                sort-separator=", "
-                initialize="false"
-                initialize-with=". "
                 delimiter=", "
                 delimiter-precedes-last="never"
             >
                 <name-part name="family" text-case="capitalize-first" />
-                <name-part name="given" />
             </name>
             <et-al font-style="italic" />
             <substitute>
@@ -579,10 +574,11 @@
         </sort>
         <layout prefix="" suffix="" delimiter="; ">
             <group>
-                <text macro="names-citation" suffix=" (" />
-                <text macro="date-year" />
-                <text macro="citation-locator" prefix=", " />
-                <text value=")" />
+                <text macro="names-citation" />
+                <group prefix="(" suffix=")">
+                    <text macro="date-year" />
+                    <text macro="citation-locator" prefix=", " />
+                </group>
             </group>
         </layout>
     </citation>
