@@ -16,7 +16,7 @@
     }
   },
   "dockerComposeFile": "../compose.yml",
-  "name": "abntyp",
+  "name": "tamandua",
   "postCreateCommand": "utpm workspace link && typst --version && utpm --version",
   // Connect as root (matches compose user)
   "remoteUser": "root",
