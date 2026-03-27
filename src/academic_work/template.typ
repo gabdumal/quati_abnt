@@ -10,7 +10,7 @@
   // Whether to print content on the back of pages.
   consider_only_odd_pages: true,
   // Whether to number pages and print its number on the header.
-  number_pages: false,
+  should_number_pages: false,
   // Whether to display editor notes.
   should_display_editor_notes: true,
 ) = {
@@ -37,7 +37,7 @@
   set page(
     paper: paper_size,
     margin: margin,
-    header: format_header(number_pages),
+    header: format_header(should_number_pages),
   )
 
   // ## Headings. Títulos.

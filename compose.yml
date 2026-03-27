@@ -1,10 +1,12 @@
-version: '3.8'
+version: "3.8"
 
 services:
   dev_environment:
     build:
       context: .devcontainer
       dockerfile: Dockerfile
+      args:
+        - TAMANDUA_VERSION=0.0.1
     user: root
     volumes:
       # Mount the project root

@@ -1,4 +1,17 @@
 {
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "/^python3 /workspace/scripts/gen_prose_csl\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^python3 scripts/gen_prose_csl\\.py$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  },
   "cSpell.words": [
     "abnt",
     "abntex",
@@ -20,17 +33,13 @@
     "typst"
   ],
   "github.copilot.nextEditSuggestions.enabled": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.40.0/schema/markdownlint-config-schema.json": true
+  },
   "latex-workshop.bibtex-fields.sort.enabled": true,
   "latex-workshop.bibtex-format.sort.enabled": false,
   "latex-workshop.bibtex-format.trailingComma": true,
-  "chat.tools.terminal.autoApprove": {
-    "/^python3 scripts/gen_prose_csl\\.py$/": {
-      "approve": true,
-      "matchCommandLine": true
-    },
-    "/^python3 /workspace/scripts/gen_prose_csl\\.py$/": {
-      "approve": true,
-      "matchCommandLine": true
-    }
-  }
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.outputPath": "$root/build/$name",
+  "tinymist.projectResolution": "lockDatabase"
 }

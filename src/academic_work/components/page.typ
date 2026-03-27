@@ -25,7 +25,7 @@
   should_count_this_page.update(true)
 }
 
-#let format_header(number_pages) = context {
+#let format_header(should_number_pages) = context {
   // Regress page counter if this page should not be counted
   let actual_page_number = here().page()
   let page_number_to_display = quantity_of_counted_pages.get()
@@ -49,7 +49,7 @@
     }
   }
 
-  if number_pages {
+  if should_number_pages {
     // Display page number in the header
     if should_number_this_page.get() {
       align(alignment)[

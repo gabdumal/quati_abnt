@@ -34,7 +34,6 @@
   },
   "dockerComposeFile": "../compose.yml",
   "name": "tamandua",
-  "postCreateCommand": "utpm workspace link && typst --version && utpm --version",
   "remoteUser": "root",
   "service": "dev_environment",
   "workspaceFolder": "/workspace"

@@ -1,6 +1,6 @@
 // # Information footer. Rodapé de informação.
 
-#import "./source.typ": print_source_for_content_created_by_authors
+#import "./source.typ": source_for_content_created_by_authors
 
 #let figure_footer(
   note: none,
@@ -9,7 +9,7 @@
   // Figures must have a source.
   Fonte:
   #if source == none {
-    [#print_source_for_content_created_by_authors().]
+    [#source_for_content_created_by_authors().]
   } else {
     source
   }

@@ -1,7 +1,7 @@
 // # Annex. Anexo.
 // NBR 14724:2024 4.2.3.4
 
-#let annex(body, title: "", label: none) = {
+#let include_annex(body, title: "", label: none) = {
   // Annexes must be numbered with letters
   set heading(numbering: "A.1.1")
 

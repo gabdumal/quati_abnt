@@ -2,17 +2,11 @@
 #import "./components/editor_note.typ": should_display_editor_notes as should_display_editor_notes_state
 #import "./components/figure.typ": figure_with_spacing_around
 #import "./components/footnote.typ": format_footnote_entry
-#import "../common/components/heading.typ": format_heading
-#import "../academic_work/components/page.typ": (
-  consider_only_odd_pages as consider_only_odd_pages_state, format_header, should_count_this_page,
-  should_number_this_page,
-)
+#import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
-#import "./packages.typ": subpar
 #import "./style/style.typ": (
-  font_family_math, font_family_mono, font_family_sans, font_family_serif, font_size_for_common_text,
-  font_size_for_smaller_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
-  margin_bottom, margin_end, margin_start, margin_top, paper_size, simple_leading_for_smaller_text,
+  font_family_math, font_family_mono, font_family_serif, font_size_for_common_text, indentation_for_paragraphs,
+  indentation_for_subparagraphs, leading_for_common_text, paper_size, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_common_text,
 )
 
@@ -24,6 +18,11 @@
   should_display_editor_notes: true,
 ) = {
   should_display_editor_notes_state.update(should_display_editor_notes)
+
+  // ## Page. Página.
+  set page(
+    paper: paper_size,
+  )
 
   // ## Text. Texto.
   set text(
@@ -153,9 +152,7 @@
     style: "./style/bibliography_style.csl",
     title: "Referências",
   )
-  show bibliography: it => {
-    format_bibliography(it)
-  }
+  show bibliography: it => format_bibliography(it)
 
   doc
 }

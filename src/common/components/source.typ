@@ -4,7 +4,7 @@
 // CDC UFJF 2023
 // #let current_year = state("tamandua_current_year", "Ano")
 
-#let print_source_for_content_created_by_authors(
+#let source_for_content_created_by_authors(
   start_with_uppercase: false,
 ) = {
   // NBR 14724:2024
