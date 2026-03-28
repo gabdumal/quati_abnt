@@ -35,7 +35,7 @@
     } else if (placement == top or placement == bottom) {
       placement + center
     } else {
-      panic("Placement should be one of the following options: none, auto, top, bottom")
+      panic("Placement should be one of the following options: none, auto, top, bottom.")
     }
     place(
       alignment,

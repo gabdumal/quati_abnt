@@ -2,8 +2,8 @@
 // NBR 14724:2024 4.2.3.2
 
 #import "../../../common/components/glossary.typ": include_glossary
-#import "../../../academic_work/components/heading.typ": not_start_on_new_page
-#import "../../../academic_work/components/page.typ": consider_only_odd_pages, not_number_page
+#import "../../components/heading.typ": not_start_on_new_page
+#import "../../components/page.typ": consider_only_odd_pages
 
 #let include_glossary_page(
   disable_back_references: true,

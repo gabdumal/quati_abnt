@@ -2,7 +2,7 @@
 // NBR 14724:2024 4.2.1.2
 
 #import "../../components/heading.typ": not_start_on_new_page
-#import "../../components/page.typ": consider_only_odd_pages, not_count_page, not_number_page
+#import "../../components/page.typ": consider_only_odd_pages, not_number_page
 
 #let include_errata_page(
   body,

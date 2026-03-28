@@ -5,7 +5,7 @@
   font_size_for_common_text, font_size_for_smaller_text, leading_for_common_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_around_figure, spacing_for_common_text,
 )
-#import "figure_footer.typ": figure_footer
+#import "./figure_footer.typ": figure_footer
 
 #let format_caption_of_figure(
   width: auto,

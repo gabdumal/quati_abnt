@@ -30,12 +30,12 @@ ENV PATH="$CARGO_HOME/bin:$PATH"
 RUN cargo install typst-cli --locked
 RUN cargo install hayagriva --features cli
 
-# Install Typst package: tamandua
-ARG TAMANDUA_VERSION
-ENV TAMANDUA_VERSION=$TAMANDUA_VERSION
-ENV TAMANDUA_PATH=/root/.local/share/typst/packages/preview/tamandua
-RUN mkdir -p $TAMANDUA_PATH/$TAMANDUA_VERSION
+# Install Typst package: quati_abnt
+ARG QUATI_ABNT_VERSION
+ENV QUATI_ABNT_VERSION=$QUATI_ABNT_VERSION
+ENV QUATI_ABNT_PATH=/root/.local/share/typst/packages/preview/quati-abnt
+RUN mkdir -p $QUATI_ABNT_PATH/$QUATI_ABNT_VERSION
 
-RUN ln -s /workspace/typst.toml $TAMANDUA_PATH/$TAMANDUA_VERSION/typst.toml
-RUN ln -s /workspace/src $TAMANDUA_PATH/$TAMANDUA_VERSION/src
-RUN ln -s /workspace/README.md $TAMANDUA_PATH/$TAMANDUA_VERSION/README.md
+RUN ln -s /workspace/typst.toml $QUATI_ABNT_PATH/$QUATI_ABNT_VERSION/typst.toml
+RUN ln -s /workspace/src $QUATI_ABNT_PATH/$QUATI_ABNT_VERSION/src
+RUN ln -s /workspace/README.md $QUATI_ABNT_PATH/$QUATI_ABNT_VERSION/README.md

@@ -1,9 +1,9 @@
 // # List of tables. Lista de tabelas.
 // NBR 14724:2024 4.2.1.10
 
-#import "../../../academic_work/components/heading.typ": not_start_on_new_page
-#import "../../../academic_work/components/list_of_tables.typ": include_list_of_tables
-#import "../../../academic_work/components/page.typ": consider_only_odd_pages, not_number_page
+#import "../../components/heading.typ": not_start_on_new_page
+#import "../../components/list_of_tables.typ": include_list_of_tables
+#import "../../components/page.typ": consider_only_odd_pages, not_number_page
 
 #let include_list_of_tables_page() = context {
   not_number_page(

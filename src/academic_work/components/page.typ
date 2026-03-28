@@ -2,12 +2,12 @@
 
 #import "../../common/style/style.typ": font_family_serif, font_size_for_smaller_text
 
-#let should_number_this_page = state("tamandua_should_number_this_page", true)
-#let should_count_this_page = state("tamandua_should_count_this_page", true)
+#let should_number_this_page = state("quati_abnt_should_number_this_page", true)
+#let should_count_this_page = state("quati_abnt_should_count_this_page", true)
 
-#let consider_only_odd_pages = state("tamandua_consider_only_odd_pages", true)
+#let consider_only_odd_pages = state("quati_abnt_consider_only_odd_pages", true)
 
-#let quantity_of_counted_pages = state("tamandua_quantity_of_counted_pages", 0)
+#let quantity_of_counted_pages = state("quati_abnt_quantity_of_counted_pages", 0)
 
 #let not_number_page(
   body,

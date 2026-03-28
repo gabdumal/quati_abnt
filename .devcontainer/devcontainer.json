@@ -33,7 +33,7 @@
     }
   },
   "dockerComposeFile": "../compose.yml",
-  "name": "tamandua",
+  "name": "quati_abnt",
   "remoteUser": "root",
   "service": "dev_environment",
   "workspaceFolder": "/workspace"

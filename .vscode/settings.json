@@ -16,7 +16,7 @@
     "abnt",
     "abntex",
     "abnTeX2",
-    "tamandua",
+    "quati_abnt",
     "alice",
     "biblatex",
     "dumont",
@@ -32,6 +32,9 @@
     "Termes",
     "typst"
   ],
+  "files.exclude": {
+    "target/": true
+  },
   "github.copilot.nextEditSuggestions.enabled": true,
   "json.schemaDownload.trustedDomains": {
     "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.40.0/schema/markdownlint-config-schema.json": true

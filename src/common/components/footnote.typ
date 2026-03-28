@@ -1,9 +1,7 @@
 // # Footnotes. Notas de rodapé.
 // NBR 14724:2024 5.2.1
 
-#import "../style/style.typ": (
-  font_size_for_smaller_text, simple_leading_for_smaller_text, simple_spacing_for_smaller_text,
-)
+#import "../style/style.typ": font_size_for_smaller_text
 
 #let format_footnote_entry(body) = context {
   set text(size: font_size_for_smaller_text)

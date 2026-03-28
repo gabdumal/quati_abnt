@@ -6,6 +6,7 @@
   with_weight: true,
 ) = {
   let weight = if with_weight { "bold" } else { "regular" }
+
   text(
     weight: weight,
   )[

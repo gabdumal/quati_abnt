@@ -1,10 +1,9 @@
 // # Abstract. Resumo.
 // NBR 14724:2024 4.2.1.7, NBR 14724:2024 4.2.1.8
 
-#import "../../components/heading.typ": not_start_on_new_page
 #import "../../../common/components/abstract.typ": include_abstract
-#import "../../../academic_work/components/page.typ": consider_only_odd_pages, not_count_page, not_number_page
-#import "../../../common/style/style.typ": font_size_for_common_text
+#import "../../components/heading.typ": not_start_on_new_page
+#import "../../components/page.typ": consider_only_odd_pages, not_number_page
 
 #let include_abstract_page(
   keywords_title: { "Palavras-chave" },

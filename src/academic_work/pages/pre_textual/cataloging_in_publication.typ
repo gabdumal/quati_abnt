@@ -1,15 +1,13 @@
 // # Cataloging-in-publication. Ficha catalográfica.
 // NBR 14724:2024 4.2.1.1.2.
 
-#import "../../../academic_work/util/advisors.typ": get_advisor_role
-#import "../../../academic_work/components/heading.typ": not_start_on_new_page
-#import "../../../academic_work/components/page.typ": (
-  consider_only_odd_pages, not_count_page, not_number_page, quantity_of_counted_pages,
-)
-#import "../../../academic_work/components/people.typ": print_people, print_person
 #import "../../../common/components/title.typ": print_title
 #import "../../../common/style/style.typ": font_family_sans, font_size_for_smaller_text, simple_leading_for_smaller_text
 #import "../../../common/util/text.typ": capitalize_first_letter
+#import "../../util/advisors.typ": get_advisor_role
+#import "../../components/heading.typ": not_start_on_new_page
+#import "../../components/page.typ": consider_only_odd_pages, not_count_page, not_number_page, quantity_of_counted_pages
+#import "../../components/people.typ": print_people, print_person
 
 #let parameters = (
   authors: {

@@ -2,7 +2,7 @@
 
 #import "../style/style.typ": font_family_sans, simple_spacing_for_smaller_text
 
-#let should_display_editor_notes = state("tamandua_should_display_editor_notes", true)
+#let should_display_editor_notes = state("quati_abnt_should_display_editor_notes", true)
 
 #let color_of_fill_of_notes = oklch(100%, 0, 90deg)
 #let paint_of_stroke_of_notes = oklch(80.78%, 0, 0deg)

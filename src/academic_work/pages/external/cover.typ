@@ -1,12 +1,12 @@
 // # Cover. Capa.
 // NBR 14724:2024 4.1.1
 
-#import "../../components/heading.typ": not_start_on_new_page
-#import "../../components/page.typ": consider_only_odd_pages, not_count_page, not_number_page
-#import "../../components/people.typ": print_people
 #import "../../../common/components/title.typ": print_title
 #import "../../../common/style/style.typ": font_family_sans
+#import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/institutional_information.typ": print_institutional_information
+#import "../../components/page.typ": consider_only_odd_pages, not_count_page, not_number_page
+#import "../../components/people.typ": print_people
 
 #let include_cover(
   organization: {

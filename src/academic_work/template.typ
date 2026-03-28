@@ -1,7 +1,7 @@
+#import "../common/style/style.typ": margin_bottom, margin_end, margin_start, margin_top, paper_size
 #import "../common/template.typ": template as common_template
 #import "./components/heading.typ": format_heading
 #import "./components/page.typ": consider_only_odd_pages as consider_only_odd_pages_state, format_header
-#import "../common/style/style.typ": margin_bottom, margin_end, margin_start, margin_top, paper_size
 
 #let template(
   doc,

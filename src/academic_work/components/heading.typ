@@ -1,8 +1,8 @@
 // # Headings. Títulos.
 
-#import "./page.typ": consider_only_odd_pages, not_count_page, should_number_this_page
 #import "../../common/components/heading.typ": format_heading as format_heading_from_common
 #import "../../common/style/style.typ": font_family_sans
+#import "./page.typ": consider_only_odd_pages
 
 #let should_start_on_new_page = state(
   "should_start_on_new_page",

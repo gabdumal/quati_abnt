@@ -1,8 +1,8 @@
 // # Advisors. Orientadores.
 
-#import "../../academic_work/util/advisors.typ": get_advisor_role
-#import "../../academic_work/components/people.typ": print_person
 #import "../../common/util/text.typ": capitalize_first_letter
+#import "../util/advisors.typ": get_advisor_role
+#import "../components/people.typ": print_person
 
 #let print_advisors = (
   advisors: {

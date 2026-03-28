@@ -1,4 +1,4 @@
-# tamandua
+# quati_abnt
 
 Compose documents according to ABNT standards.
 

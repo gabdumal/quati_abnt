@@ -1,6 +1,6 @@
-#import "../common/template.typ": template as common_template
 #import "../common/components/heading.typ": format_heading
 #import "../common/style/style.typ": margin_bottom, margin_end, margin_start, margin_top
+#import "../common/template.typ": template as common_template
 
 #let template(
   doc,
@@ -25,7 +25,11 @@
   show heading: set heading(
     supplement: "Subseção",
   )
-  show heading.where(level: 1): set heading(supplement: "Seção")
+  show heading.where(
+    level: 1,
+  ): set heading(
+    supplement: "Seção",
+  )
 
   // ### Format. Formatação.
   show heading: it => {

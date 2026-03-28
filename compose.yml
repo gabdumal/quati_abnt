@@ -6,7 +6,7 @@ services:
       context: .devcontainer
       dockerfile: Dockerfile
       args:
-        - TAMANDUA_VERSION=0.0.1
+        - QUATI_ABNT_VERSION=0.0.1
     user: root
     volumes:
       # Mount the project root
