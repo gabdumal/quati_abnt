@@ -9,7 +9,7 @@ In order to create a new project using this template, you can either:
 - use the following command when running typst **locally**;
 
 ```bash
-typst init @preview/quati-abnt:0.0.4
+typst init @preview/quati-abnt:0.0.5
 ```
 
 - or select [this template](https://typst.app/universe/package/quati-abnt) on the Typst **web app**.
@@ -33,7 +33,7 @@ After that, select the `main.typ` file on the **desired template** to render the
 On the `/packages.typ` file inside each template folder, you will find the importing of the `quati-abnt` package.
 
 ```typst
-#import "@preview/quati-abnt:0.0.4" as quati-abnt
+#import "@preview/quati-abnt:0.0.5" as quati-abnt
 ```
 
 ## Paper template

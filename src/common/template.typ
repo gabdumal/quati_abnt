@@ -102,6 +102,7 @@
 
   // ## Links. Ligações.
   show link: it => {
+    // TODO: use if type(it.dest) != label
     if (color_of_links != none) {
       set text(fill: color_of_links)
       it
