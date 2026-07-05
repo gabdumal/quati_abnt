@@ -1,12 +1,11 @@
 // # Pre-textual elements. Elementos pré-textuais.
 // NBR 14724:2024 4.2.1
 
-#import "../data/glossary.typ": abbreviations_entries
-#import "../data/glossary.typ": symbols_entries
 #import "../data/data.typ": (
   address, advisors, approval_date, area_of_concentration, authors, custom_nature, degree, degree_topic,
   examination_committee, institution, organization, program, subtitle, title, type_of_work, volume_number, year,
 )
+#import "../data/glossary.typ": abbreviations_entries, symbols_entries
 #import "../packages.typ": (
   quati-abnt.academic_work.pages.include_acknowledgments_page, quati-abnt.academic_work.pages.include_approval_page,
   quati-abnt.academic_work.pages.include_cataloging_in_publication,
@@ -144,7 +143,7 @@
 // Se não houver algum agradecimento a fazer, você pode apenas remover o bloco a seguir.
 
 #include_acknowledgments_page()[
-  #lorem(50)
+  Agradecemos ao Grupo de Educação Tutorial em Sistemas de Informação (GetSi) da Universidade Federal de Juiz de Fora (UFJF) por prover bolsas de graduação que possibilitaram a realização deste trabalho.
 ]
 
 // ====================

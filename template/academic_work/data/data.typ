@@ -18,16 +18,16 @@
 // Autores — obrigatório.
 #let authors = (
   (
+    first_name: [Gabriel],
+    middle_name: none,
+    last_name: [Malosto],
+    gender: "m",
+  ),
+  (
     first_name: [Alice],
     middle_name: [de Exemplo],
     last_name: [Almeida],
     gender: "f",
-  ),
-  (
-    first_name: [Eduardo],
-    middle_name: none,
-    last_name: [Exemplo],
-    gender: "m",
   ),
 )
 

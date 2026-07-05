@@ -1,14 +1,18 @@
 // # Academic Work. Trabalho Acadêmico.
 // NBR 14724:2024
 
-#import "./data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
-#import "./packages.typ": glossarium, quati-abnt
+#import "components.typ": *
+#import "data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
+#import "packages.typ": *
+#import "util.typ": *
+
 
 // ## Glossary. Glossário.
 #show: glossarium.make-glossary
 #glossarium.register-glossary(abbreviations_entries)
 #glossarium.register-glossary(symbols_entries)
 #glossarium.register-glossary(glossary_entries)
+
 
 // ## Template. Modelo.
 #show: it => quati-abnt.academic_work.template(
@@ -26,8 +30,8 @@
   font_family_for_monospaced_text: quati-abnt.common.style.font_family_mono,
   font_family_for_editor_notes: quati-abnt.common.style.font_family_sans,
 
-  // Define whether to use larger text as typographic highlight.
-  // Defina se deve ser utilizada uma fonte maior como destaque tipográfico.
+  // Define whether to use larger text as typographic highlight instead of uppercase.
+  // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
   should_use_larger_text_to_highlight: false,
 
   // Define whether to format for electronic file only (true), or to print (false).
@@ -42,6 +46,7 @@
   // Defina se deve exibir as notas de editor.
   should_display_editor_notes: true,
 )
+
 
 // ## External elements. Elementos externos.
 #include "./content/external.typ"

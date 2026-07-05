@@ -30,7 +30,7 @@
   )
 }
 
-#let note_from_eduardo = (
+#let note_from_gabriel = (
   note: editor_note,
   it,
 ) => {
@@ -38,7 +38,7 @@
   note(
     prefixes: (
       (
-        body: "Eduardo",
+        body: "Gabriel",
         fill: color,
         stroke: color.saturate(25%),
       ),
