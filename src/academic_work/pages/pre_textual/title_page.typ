@@ -5,7 +5,7 @@
 #import "../../../common/style/style.typ": (
   font_size_for_smaller_text, simple_leading_for_smaller_text, simple_spacing_for_smaller_text,
 )
-#import "../../../common/util/font_family.typ": font_family_for_highlighted_text_state
+#import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../../components/advisors.typ": print_advisors
 #import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/nature.typ": print_nature

@@ -1,8 +1,22 @@
 // # Advisors. Orientadores.
 
-#import "../../common/util/text.typ": capitalize_first_letter
-#import "../util/advisors.typ": get_advisor_role
+#import "../../common/components/text.typ": capitalize_first_letter
 #import "../components/people.typ": print_person
+
+
+#let get_advisor_role(
+  gender: "m",
+  is_co_advisor: false,
+) = {
+  if is_co_advisor {
+    "co"
+  }
+  "orientador"
+  if gender == "f" {
+    "a"
+  }
+}
+
 
 #let print_advisors = (
   advisors: {

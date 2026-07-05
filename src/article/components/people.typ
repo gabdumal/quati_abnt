@@ -1,6 +1,6 @@
 // # People. Pessoas.
 
-#import "../../common/util/font_family.typ": font_family_for_common_text_state
+#import "../../common/components/font_family.typ": font_family_for_common_text_state
 
 #let print_person(
   person: (

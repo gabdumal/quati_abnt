@@ -1,7 +1,7 @@
 // # Page. Página.
 
 #import "../../common/style/style.typ": font_size_for_smaller_text
-#import "../../common/util/font_family.typ": font_family_for_common_text_state
+#import "../../common/components/font_family.typ": font_family_for_common_text_state
 
 
 #let should_number_this_page = state("quati_abnt_should_number_this_page", true)

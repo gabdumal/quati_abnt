@@ -3,19 +3,17 @@
 #import "./components/bibliography.typ": format_bibliography
 #import "./components/editor_note.typ": should_display_editor_notes_state
 #import "./components/figure.typ": figure_with_spacing_around
-#import "./components/footnote.typ": format_footnote_entry
-#import "./components/heading.typ": format_heading
-#import "./components/quote.typ": format_quote
-
-#import "./style/style.typ": (
-  font_size_for_common_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
-  paper_size, simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
-)
-
-#import "./util/font_family.typ": (
+#import "components/font_family.typ": (
   font_family_for_common_text_state, font_family_for_editor_notes_state, font_family_for_highlighted_text_state,
   font_family_for_math_text_state, font_family_for_monospaced_text_state, font_family_math, font_family_mono,
   font_family_sans, font_family_serif,
+)
+#import "./components/footnote.typ": format_footnote_entry
+#import "./components/heading.typ": format_heading
+#import "./components/quote.typ": format_quote
+#import "./style/style.typ": (
+  font_size_for_common_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
+  paper_size, simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
 )
 
 

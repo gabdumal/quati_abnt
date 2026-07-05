@@ -1,7 +1,7 @@
 // # Outline. Sumário.
 // NBR 6027:2012, NBR 14724:2024 4.2.1.13
 
-#import "../../../common/util/font_family.typ": font_family_for_highlighted_text_state
+#import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../../../common/components/heading.typ": capitalize_or_underline_if_needed, get_styling_for_heading
 #import "../../../common/template.typ": should_use_larger_text_to_highlight_state
 #import "../../components/heading.typ": not_start_on_new_page

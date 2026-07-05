@@ -1,7 +1,7 @@
 // # Equation. Equação.
 // NBR 14724:2024 5.7
 
-#import "../util/font_family.typ": font_family_for_math_text_state
+#import "../components/font_family.typ": font_family_for_math_text_state
 
 #let equation(
   placement: none,

@@ -1,6 +1,6 @@
 // # Headings. Títulos.
 
-#import "../../common/util/font_family.typ": font_family_for_highlighted_text_state
+#import "../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../style/style.typ": (
   font_size_for_common_text, font_size_for_larger_text, leading_for_common_text, leading_for_larger_text,
   spacing_for_common_text, spacing_for_larger_text,

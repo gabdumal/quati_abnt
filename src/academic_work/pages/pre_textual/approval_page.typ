@@ -6,15 +6,15 @@
   font_size_for_larger_text, font_size_for_smaller_text, leading_for_larger_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_larger_text,
 )
-#import "../../../common/util/font_family.typ": font_family_for_highlighted_text_state
-#import "../../../common/util/gender.typ": get_gender_ending
+#import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
+#import "../../../common/components/gender.typ": get_gender_ending
 #import "../../../common/template.typ": should_use_larger_text_to_highlight_state
 #import "../../components/examiner.typ": print_examiner
 #import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/nature.typ": print_nature
 #import "../../components/page.typ": not_number_page, should_consider_only_odd_pages
 #import "../../components/people.typ": print_people
-#import "../../util/advisors.typ": get_advisor_role
+#import "../../components/advisors.typ": get_advisor_role
 
 #let include_approval_page(
   authors: {

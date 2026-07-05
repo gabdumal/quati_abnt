@@ -7,7 +7,9 @@
   spacing_for_common_text, spacing_for_larger_text,
 )
 #import "../../common/template.typ": should_use_larger_text_to_highlight_state
-#import "../../common/util/font_family.typ": font_family_for_common_text_state, font_family_for_highlighted_text_state
+#import "../../common/components/font_family.typ": (
+  font_family_for_common_text_state, font_family_for_highlighted_text_state,
+)
 #import "./people.typ": print_people
 
 #let include_opening = (

@@ -1,7 +1,7 @@
 // # List of tables. Lista de tabelas.
 // NBR 14724:2024 4.2.1.10
 
-#import "../../common/util/font_family.typ": font_family_for_highlighted_text_state
+#import "../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../components/entry_on_outline_lists.typ": format_outline_entry
 
 #let include_list_of_tables() = context {
