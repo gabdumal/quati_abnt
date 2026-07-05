@@ -1,5 +1,6 @@
-#import "../../components.typ": describe_figure, equation, note_from_alice, note_from_eduardo, todo_note
-#import "../../util.typ": get_term
+#import "../../components.typ": *
+#import "../../packages.typ": *
+
 
 = Introdução <seção:introdução>
 

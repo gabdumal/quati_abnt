@@ -2,11 +2,12 @@
 // NBR 6022:2018 5.1
 
 #import "../data/data.typ": authors, subtitle, title
+#import "../components.typ": *
 #import "../packages.typ": (
   glossarium, quati-abnt.article.components.include_abstracts, quati-abnt.article.components.include_opening,
   quati-abnt.common.components.print_title,
 )
-#import "../util.typ": foreign_text
+
 
 // ## Title in foreign language. Título em língua estrangeira.
 #let title_in_foreign_language = {
@@ -20,7 +21,10 @@
   )
 }
 
+
 // ## Abstract. Resumo.
+
+// ### Abstract in main language. Resumo em língua principal.
 #let abstract_in_main_language = {
   (
     keywords_title: "Palavras-chave",
@@ -37,7 +41,8 @@
   )
 }
 
-#let first_abstract_in_secondary_language = {
+// ### Abstract in foreign language. Resumo em língua estrangeira.
+#let first_abstract_in_foreign_language = {
   (
     keywords_title: "Keywords",
     keywords: (
@@ -58,11 +63,16 @@
   )
 }
 
+// ## Lista de resumos.
 // Include in this list all abstracts in the order they should appear.
+// Inclua nessa lista todos os resumos da ordem em que eles devem aparecer.
 #let abstracts = (
   abstract_in_main_language,
-  first_abstract_in_secondary_language,
+  first_abstract_in_foreign_language,
 )
+
+
+// ## Display. Exibição.
 
 #include_opening(
   authors: authors,

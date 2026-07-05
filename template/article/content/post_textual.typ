@@ -2,17 +2,26 @@
 // NBR 6022:2018 5.3
 
 #import "../data/glossary.typ": glossaries_entries
+#import "../components.typ": *
 #import "../packages.typ": (
   quati-abnt.article.components.include_acknowledgements, quati-abnt.common.components.include_annex,
   quati-abnt.common.components.include_appendix, quati-abnt.common.components.include_glossary,
 )
 
+
+// ====================
 // ## Glossary. Glossário.
 // NBR 6022:2018 5.3.2
+
 #include_glossary(
   disable_back_references: true,
   glossaries_entries,
 )
+
+// ====================
+
+// ====================
+// ## Appendixes. Apêndices.
 
 #counter(heading).update(0)
 #include_appendix(
@@ -22,6 +31,11 @@
   #lorem(50)
 ]
 
+// ====================
+
+// ====================
+// ## Annexes. Anexos.
+
 #counter(heading).update(0)
 #include_annex(
   title: [Quod idem licet transferre in voluptatem, ut],
@@ -30,8 +44,14 @@
   #lorem(50)
 ]
 
+// ====================
+
+// ====================
 // ## Acknowledgments. Agradecimentos.
 // NBR 6022:2018 5.3.5
+
 #include_acknowledgements[
   #lorem(10)
 ]
+
+// ====================

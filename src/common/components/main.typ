@@ -13,3 +13,11 @@
 #import "./source.typ": source_for_content_created_by_authors
 #import "./table.typ": format_table
 #import "./title.typ": print_title
+
+
+// ## Util. Utilitários.
+
+#import "../util/foreign_text.typ": foreign_text
+#import "../util/gender.typ": get_gender_ending
+#import "../util/terms.typ": get_term_in_list
+#import "../util/text.typ": capitalize_first_letter

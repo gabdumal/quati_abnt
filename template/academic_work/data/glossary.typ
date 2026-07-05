@@ -1,6 +1,6 @@
 // # Glossary. Glossário.
 
-#import "../util.typ": foreign_text
+#import "../components.typ": *
 
 
 // ## Abbreviations. Abreviaturas.

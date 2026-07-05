@@ -1,7 +1,9 @@
 // # Terms. Termos.
 
-#import "../packages.typ": quati-abnt.common.util.foreign_text, quati-abnt.common.util.get_term as quati_abnt_get_term
+#import "../packages.typ": quati-abnt.common.components.foreign_text, quati-abnt.common.components.get_term_in_list
 
+
+// ## Definition. Definição.
 #let terms_entries = (
   (
     key: "link",
@@ -23,13 +25,15 @@
   ),
 )
 
+
+// ## Access. Acesso.
 #let get_term = (
   capitalize: false,
   field: "short",
   plural: false,
   term_key,
 ) => {
-  quati_abnt_get_term(
+  get_term_in_list(
     capitalize: capitalize,
     field: field,
     plural: plural,

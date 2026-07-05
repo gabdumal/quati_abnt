@@ -1,6 +1,5 @@
 #import "../../components.typ": *
 #import "../../packages.typ": *
-#import "../../util.typ": *
 
 
 = Introdução <capítulo:introdução>

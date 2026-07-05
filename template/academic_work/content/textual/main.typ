@@ -3,7 +3,6 @@
 
 #import "../../components.typ": *
 #import "../../packages.typ": *
-#import "../../util.typ": *
 
 
 #include "introduction.typ"

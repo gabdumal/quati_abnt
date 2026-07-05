@@ -22,8 +22,8 @@
 }
 
 
-// ## Abstract in secondary language. Resumo em língua secundária.
-#let first_abstract_in_secondary_language = {
+// ## Abstract in foreign language. Resumo em língua estrangeira.
+#let first_abstract_in_foreign_language = {
   (
     keywords_title: "Keywords",
     keywords: (
@@ -50,7 +50,7 @@
 // Inclua nessa lista todos os resumos da ordem em que eles devem aparecer.
 #let abstracts = (
   abstract_in_main_language,
-  first_abstract_in_secondary_language,
+  first_abstract_in_foreign_language,
 )
 
 

@@ -1,6 +1,6 @@
 // # Terms. Termos.
 
-#let get_term(
+#let get_term_in_list(
   capitalize: false,
   field: "short",
   plural: false,

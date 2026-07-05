@@ -4,7 +4,6 @@
 #import "components.typ": *
 #import "data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
 #import "packages.typ": *
-#import "util.typ": *
 
 
 // ## Glossary. Glossário.

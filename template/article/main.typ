@@ -2,11 +2,14 @@
 // NBR 6022:2018
 
 #import "./data/glossary.typ": glossaries_entries
-#import "./packages.typ": glossarium, quati-abnt
+#import "./components.typ": *
+#import "./packages.typ": *
+
 
 // ## Glossary. Glossário.
 #show: glossarium.make-glossary
 #glossarium.register-glossary(glossaries_entries)
+
 
 // ## Template. Modelo.
 #show: it => quati-abnt.article.template(
@@ -36,6 +39,7 @@
   // Defina se deve exibir as notas de editor.
   should_display_editor_notes: true,
 )
+
 
 #include "./content/pre_textual.typ"
 
