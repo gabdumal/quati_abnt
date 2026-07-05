@@ -50,7 +50,6 @@
 
   should_display_editor_notes_state.update(should_display_editor_notes)
 
-
   // ## Page. Página.
   set page(
     paper: paper_size,
@@ -131,18 +130,6 @@
       it
     }
 
-    if (it.element != none) {
-      let element = it.element
-      let function = element.func()
-      if (function == heading or function == figure or function == math.equation) {
-        let fields = element.fields()
-        let kind = if (fields.keys().contains("kind")) { fields.kind } else { none }
-        if (kind != "glossarium_entry") {
-          // TODO: Cross-references must be displayed in lowercase.
-          return lower(content)
-        }
-      }
-    }
     content
   }
 

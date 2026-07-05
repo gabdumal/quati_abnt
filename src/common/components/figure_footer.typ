@@ -6,14 +6,16 @@
   note: none,
   source: none,
 ) = [
-  // Figures must have a source.
-  Fonte:
-  #if source == none {
-    [#source_for_content_created_by_authors().]
-  } else {
-    source
-  }
-  #parbreak()
+  // Figures must have a source, except if explicitly defined.
+  #if not source == false [
+    Fonte:
+    #if source == none {
+      [#source_for_content_created_by_authors().]
+    } else {
+      source
+    }
+    #parbreak()
+  ]
   #if note != none {
     if type(note) == array {
       for (index, item) in note.enumerate() {

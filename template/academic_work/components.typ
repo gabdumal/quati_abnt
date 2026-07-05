@@ -6,7 +6,8 @@
   quati-abnt.common.components.create_status_note, quati-abnt.common.components.describe_figure,
   quati-abnt.common.components.done_note, quati-abnt.common.components.editor_note,
   quati-abnt.common.components.equation, quati-abnt.common.components.format_table,
-  quati-abnt.common.components.progress_note, quati-abnt.common.components.todo_note,
+  quati-abnt.common.components.progress_note, quati-abnt.common.components.source_for_content_created_by_authors,
+  quati-abnt.common.components.todo_note,
 )
 
 // ## Note. Nota.
