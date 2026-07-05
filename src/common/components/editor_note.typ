@@ -1,7 +1,7 @@
 // # Note. Nota.
 
-#import "../style/style.typ": simple_spacing_for_smaller_text
 #import "../components/font_family.typ": font_family_for_editor_notes_state
+#import "../style/style.typ": simple_spacing_for_smaller_text
 
 #let should_display_editor_notes_state = state("quati_abnt_should_display_editor_notes", true)
 

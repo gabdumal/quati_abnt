@@ -1,20 +1,20 @@
 // # Approval page. Folha de aprovação.
 // NBR 14724:2024 4.2.1.3, NBR 14724:2024 5.2.4
 
+#import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
+#import "../../../common/components/gender.typ": get_gender_ending
 #import "../../../common/components/title.typ": print_title
 #import "../../../common/style/style.typ": (
   font_size_for_larger_text, font_size_for_smaller_text, leading_for_larger_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_larger_text,
 )
-#import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
-#import "../../../common/components/gender.typ": get_gender_ending
 #import "../../../common/template.typ": should_use_larger_text_to_highlight_state
+#import "../../components/advisors.typ": get_advisor_role
 #import "../../components/examiner.typ": print_examiner
 #import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/nature.typ": print_nature
 #import "../../components/page.typ": not_number_page, should_consider_only_odd_pages
 #import "../../components/people.typ": print_people
-#import "../../components/advisors.typ": get_advisor_role
 
 #let include_approval_page(
   authors: {

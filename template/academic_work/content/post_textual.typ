@@ -1,8 +1,8 @@
 // # Post-textual elements. Elementos pós-textuais.
 // NBR 14724:2024 4.2.3
 
-#import "../data/glossary.typ": glossary_entries
 #import "../components.typ": *
+#import "../data/glossary.typ": glossary_entries
 #import "../packages.typ": (
   quati-abnt.academic_work.pages.include_glossary_page, quati-abnt.common.components.include_annex,
   quati-abnt.common.components.include_appendix,

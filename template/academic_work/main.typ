@@ -1,9 +1,9 @@
 // # Academic Work. Trabalho Acadêmico.
 // NBR 14724:2024
 
-#import "components.typ": *
-#import "data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
-#import "packages.typ": *
+#import "./components.typ": *
+#import "./data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
+#import "./packages.typ": *
 
 
 // ## Glossary. Glossário.

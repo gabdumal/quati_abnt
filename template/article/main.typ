@@ -1,8 +1,8 @@
 // # Article. Artigo.
 // NBR 6022:2018
 
-#import "./data/glossary.typ": glossaries_entries
 #import "./components.typ": *
+#import "./data/glossary.typ": glossaries_entries
 #import "./packages.typ": *
 
 

@@ -1,7 +1,7 @@
+#import "../common/components/font_family.typ": font_family_math, font_family_mono, font_family_sans, font_family_serif
 #import "../common/components/heading.typ": format_heading
 #import "../common/style/style.typ": margin_bottom, margin_end, margin_start, margin_top
 #import "../common/template.typ": template as common_template
-#import "../common/components/font_family.typ": font_family_math, font_family_mono, font_family_sans, font_family_serif
 
 #let template(
   doc,

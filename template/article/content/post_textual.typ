@@ -1,8 +1,8 @@
 // # Post-textual elements. Elementos pós-textuais.
 // NBR 6022:2018 5.3
 
-#import "../data/glossary.typ": glossaries_entries
 #import "../components.typ": *
+#import "../data/glossary.typ": glossaries_entries
 #import "../packages.typ": (
   quati-abnt.article.components.include_acknowledgements, quati-abnt.common.components.include_annex,
   quati-abnt.common.components.include_appendix, quati-abnt.common.components.include_glossary,
@@ -24,6 +24,7 @@
 // ## Appendixes. Apêndices.
 
 #counter(heading).update(0)
+
 #include_appendix(
   title: [Quod idem licet transferre in voluptatem, ut],
   label: <anexo:quod>,
@@ -37,6 +38,7 @@
 // ## Annexes. Anexos.
 
 #counter(heading).update(0)
+
 #include_annex(
   title: [Quod idem licet transferre in voluptatem, ut],
   label: <anexo:quod>,

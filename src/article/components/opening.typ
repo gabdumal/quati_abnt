@@ -1,15 +1,15 @@
 // # Opening. Abertura.
 // NBR 6022:2018 5.1
 
+#import "../../common/components/font_family.typ": (
+  font_family_for_common_text_state, font_family_for_highlighted_text_state,
+)
 #import "../../common/components/title.typ": print_title
 #import "../../common/style/style.typ": (
   font_size_for_common_text, font_size_for_larger_text, leading_for_common_text, leading_for_larger_text,
   spacing_for_common_text, spacing_for_larger_text,
 )
 #import "../../common/template.typ": should_use_larger_text_to_highlight_state
-#import "../../common/components/font_family.typ": (
-  font_family_for_common_text_state, font_family_for_highlighted_text_state,
-)
 #import "./people.typ": print_people
 
 #let include_opening = (

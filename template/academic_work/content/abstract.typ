@@ -45,7 +45,7 @@
 }
 
 
-// ## Lista de resumos.
+// ## List of abstracts. Lista de resumos.
 // Include in this list all abstracts in the order they should appear.
 // Inclua nessa lista todos os resumos da ordem em que eles devem aparecer.
 #let abstracts = (
