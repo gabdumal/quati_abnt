@@ -1,6 +1,6 @@
 #import "../../components.typ": (
-  cite_prose, describe_figure, equation, note_from_alice, note_from_eduardo, source_for_content_created_by_authors,
-  todo_note,
+  cite_prose, closed_discussion_note, describe_figure, done_note, editor_note, equation, note_from_alice,
+  note_from_eduardo, open_discussion_note, progress_note, source_for_content_created_by_authors, todo_note,
 )
 #import "../../util.typ": get_term
 
@@ -89,6 +89,9 @@ Perceba, porém, que a @abnt exige que sempre seja  descrita a fonte.
 
 == Nota de rodapé
 
+Uma nota de rodapé pode ser inserida usando o comando `footnote`.
+Veja o exemplo a seguir.
+
 Exemplo de nota de rodapé
 #footnote[
   #lorem(10)
@@ -96,15 +99,65 @@ Exemplo de nota de rodapé
 
 == Nota de editor
 
+No arquivo `/components.typ`, você pode customizar as notas de editor com os nomes da sua equipe.
+
+Então, importe-as no topo do arquivo em que estiver escrevendo.
+Dessa forma, você pode abrir uma nota conforme o exemplo a seguir.
+
 #note_from_alice()[
   Nota da Alice.
 ]
+
+Você também pode usar o atributo `note` para determinar o tipo de nota desejado.
+Também é necessário importar o tipo da note no topo do arquivo.
 
 #note_from_eduardo(note: todo_note)[
   Nota de afazeres do Eduardo.
 ]
 
+#note_from_eduardo(note: progress_note)[
+  Nota em progresso do Eduardo.
+]
+
+#note_from_eduardo(note: done_note)[
+  Nota concluída do Eduardo.
+]
+
+Você pode misturar e aninhar vários estilos de nota, como melhor funcionar para o seu trabalho.
+
+#editor_note[
+  Nota básica.
+]
+
+#closed_discussion_note[
+
+  #note_from_alice[
+
+    #progress_note[
+      Progresso.
+    ]
+
+    #todo_note[
+      Afazer.
+    ]
+
+  ]
+
+  #note_from_eduardo(note: done_note)[
+    Comentário.
+  ]
+
+]
+
+#open_discussion_note[
+  #note_from_eduardo(note: todo_note)[
+    Sugestão.
+  ]
+]
+
 == Texto mono-espaçado
+
+Para inserir texto mono-espaçado, abra um bloco usando o caractere ``` ` ``` três vezes, como a seguir: ```` ``` ````.
 
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -112,27 +165,46 @@ sed do eiusmod tempor incididunt ut labore et dolore magnam
 aliquam quaerat voluptatem.
 ```
 
+
 == Equações
 
-#describe_figure(
-  // placement: auto,
+Uma equação pode ser descrita ao abrir um bloco com dois símbolos de `$`.
+Você pode definir um rótulo ao final de uma equação, a fim de se referir a ela no texto.
+Veja o exemplo para a @equação:soma.
+
+$ 1 + 1 = 2 $ <equação:soma>
+
+Caso deseje inserir texto na equação, utilize o comando `equation` para abrir um bloco.
+
+#equation(
+  width: 41.82%,
 )[
+  $ 1 + X = 2 $
+  + X tem o valor de 2.
+]
+
+Além disso, caso deseje dar mais destaque a uma equação, você pode usar os comandos `describe_figure` e `figure` para criar um esquema de equações.
+Veja o exemplo do @esquema:soma.
+
+#describe_figure()[
   #figure(
     supplement: "Esquema",
     kind: "scheme",
     caption: [
-      Soma entre dois números.
+      Soma entre dois números
     ],
   )[
     #equation(
       width: 41.82%,
     )[
-      $ 1 + 1 = 2 $ <equação:soma>
+      $ 1 + 1 = 2 $
     ]
-  ]
+  ] <esquema:soma>
 ]
 
 == Glossário
+
+Você pode definir termos nos glossários no arquivo `/data/glossary.typ`.
 
 Exemplo de uso de texto no glossário:
 @rn.

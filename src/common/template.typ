@@ -133,6 +133,13 @@
     content
   }
 
+  // ## Equations. Equações.
+  // NBR 14724:2024 5.7
+  set math.equation(
+    numbering: "(1.1)",
+    supplement: "Equação",
+  )
+
   // ## Figures. Figuras.
   // NBR 14724:2024 5.8
   set figure.caption(

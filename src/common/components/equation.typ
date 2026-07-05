@@ -11,7 +11,6 @@
   set text(
     font: font_family_for_math_text_state.get(),
   )
-  set math.equation(numbering: "(1.1)")
 
   let equation_block = align(
     center,
