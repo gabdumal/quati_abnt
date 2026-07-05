@@ -9,6 +9,10 @@
 
 Você pode adicionar notas de editor para comunicar com seus colaboradores o progresso do trabalho.
 
+No momento de exportar seu trabalho, lembre-se de desativar a exibição das notas.
+Faça isso alterando a definição do modelo no arquivo `/main.typ`.
+Defina o parâmetro `should_display_editor_notes: false`.
+
 Para incluir uma nota auxiliar, deve-se utilizar um dos ambientes de definição de nota.
 
 O primeiro ambiente é o `editor_note`.

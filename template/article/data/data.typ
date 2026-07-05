@@ -19,6 +19,16 @@
 // Autores — obrigatório.
 #let authors = (
   (
+    first_name: [Gabriel],
+    middle_name: none,
+    last_name: [Malosto],
+    gender: "m",
+    curriculum: [
+      Universidade Federal de Juiz de Fora, Mestrando em Ciência da Computação, PPGCC.
+      E-mail: #link("mailto:professional@gabdumal.com").
+    ],
+  ),
+  (
     first_name: [Alice],
     middle_name: [de Exemplo],
     last_name: [Almeida],
@@ -26,16 +36,6 @@
     curriculum: [
       Universidade de Exemplo, Mestre em Preenchimento de Espaços.
       E-mail: #link("mailto:alice@email.com").
-    ],
-  ),
-  (
-    first_name: [Eduardo],
-    middle_name: none,
-    last_name: [Exemplo],
-    gender: "m",
-    curriculum: [
-      Universidade de Exemplo, Bacharel em Completude de Texto.
-      E-mail: #link("mailto:eduardo@email.com").
     ],
   ),
 )

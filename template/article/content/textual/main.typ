@@ -31,7 +31,7 @@ Esta é a @seção:introdução, de introdução.
         Quadrado preto
       ],
       image(
-        width: 4.75cm,
+        width: 4.57cm,
         "./../../assets/images/black_square.png",
       ),
     )<figura:quadrado_preto>
@@ -53,8 +53,8 @@ Exemplo de nota de rodapé
   Nota da Alice.
 ]
 
-#note_from_eduardo(note: todo_note)[
-  Nota de afazeres do Eduardo.
+#note_from_gabriel(note: todo_note)[
+  Nota de afazeres do Gabriel.
 ]
 
 == Texto mono-espaçado
@@ -92,8 +92,10 @@ Exemplo de uso de texto no glossário:
 
 Exemplo de uso de termo útil: #get_term("software").
 
-= Título primário
-== Título secundário
-=== Título terciário
-==== Título quaternário
-===== Título quinário
+= Fundamentação teórica <seção:fundamentação>
+
+= Material e métodos <seção:métodos>
+
+= Resultados <seção:resultados>
+
+= Considerações finais <seção:considerações>

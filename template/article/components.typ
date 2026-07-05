@@ -33,7 +33,7 @@
   note: editor_note,
   it,
 ) => {
-  let color = oklch(80.43%, 0.1, 278.25deg)
+  let color = oklch(85%, 0.097, 19.33deg)
   note(
     prefixes: (
       (
@@ -46,16 +46,16 @@
   )
 }
 
-#let note_from_eduardo = (
+#let note_from_gabriel = (
   note: editor_note,
   it,
 ) => {
-  let color = oklch(85%, 0.097, 19.33deg)
+  let color = oklch(80.43%, 0.1, 278.25deg)
   note(
     prefixes: (
       (
         fill: color,
-        body: "Eduardo",
+        body: "Gabriel",
         stroke: color.saturate(25%),
       ),
     ),
