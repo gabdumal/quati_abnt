@@ -25,7 +25,6 @@ A alínea que apresentará o contexto da subalínea deve finalizar em "dois pont
 + alínea 2.
 
 
-
 == Notas de rodapé
 
 Para incluir uma nota de rodapé, utilize o comando `footnote`.
@@ -57,56 +56,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magnam
 aliquam quaerat voluptatem.
 ```
-
-
-== Equações
-
-Uma equação pode ser descrita ao abrir um bloco com dois símbolos de `$`.
-Você pode definir um rótulo ao final de uma equação, a fim de se referir a ela no texto.
-Veja o exemplo para a @equação:soma.
-
-$ 1 + 1 = 2 $ <equação:soma>
-
-Caso deseje inserir texto na equação, utilize o comando `equation` para abrir um bloco.
-
-#equation(
-  width: 41.82%,
-)[
-  $ 1 + X = 2 $
-  + X tem o valor de 2.
-]
-
-Além disso, caso deseje dar mais destaque a uma equação, você pode usar os comandos `describe_figure` e `figure` para criar um esquema de equações.
-Veja o exemplo do @esquema:soma.
-
-#describe_figure()[
-  #figure(
-    supplement: "Esquema",
-    kind: "scheme",
-    caption: [
-      Soma entre dois números
-    ],
-  )[
-    #equation(
-      width: 41.82%,
-    )[
-      $ 1 + 1 = 2 $
-    ]
-  ] <esquema:soma>
-]
-
-
-== Citação
-
-#quote(
-  attribution: [
-    @dumont:1918:o_que_eu_vi_o_que_nos_veremos[p. 15].
-  ],
-  block: true,
-)[
-  --- Quero um balão de cem metros cúbicos.
-
-  Grande espanto!
-  Creio mesmo que pensaram que eu era doido.
-  Alguns meses depois, o "Brasil", com grande espanto de todos os entendidos, atravessava Paris, lindo na sua transparência, como uma grande bola de sabão
-]

@@ -526,3 +526,127 @@ Dessa forma, ambos são incluídos em todas as páginas que a tabela ocupar.
     ),
   )<tabela:vendas_mensais>],
 )
+
+
+
+== Equações
+
+Equações podem ser escritas dentro de um ambiente cercado por `$ ... $`.
+
+$ a^2 + b^2 = c^2 $
+
+Elas serão automaticamente numeradas.
+Caso deseje que uma equação não seja numerada, abra um bloco com `#[]`.
+Dentro dele, utilize o comando `set math.equation()` e defina o parâmetro `numbering: none`.
+
+#[
+  #set math.equation(numbering: none)
+  $ 1 + 1 = 2 $
+]
+
+Caso deseje inserir texto descritivo para a equação, utilize o comando `equation` para abrir um bloco.
+Esse ambiente recebe como argumento opcional `width`, para determinar a largura do bloco de equações.
+
+#equation(
+  width: 41.82%,
+)[
+  $ 1 + X = 2 $
+  - X tem o valor de 1.
+]
+
+=== Equações com rótulos
+
+Você pode atribuir rótulos a uma equação para citá-la no texto.
+Por exemplo, essa é a @equação:teorema_pitagórico e essa é a @equação:número_triangular.
+
+#equation(
+  width: 75%,
+)[
+  Sejam $a$, $b$ e $c$ o comprimento dos lados de um triângulo retângulo.
+  Então, sabemos que:
+  $ a^2 + b^2 = c^2 $ <equação:teorema_pitagórico>
+
+  Prove por indução:
+  $ sum_(k=1)^n k = (n(n+1)) / 2 $ <equação:número_triangular>
+]
+
+=== Esquemas
+
+Além disso, caso deseje dar mais destaque a uma equação, você pode usar os comandos `describe_figure` e `figure` para criar um esquema de equações.
+
+Nessa caso, defina os seguinte atributos para o comando `figure`: `supplement: "Esquema"` e `kind: "scheme"`.
+Veja o exemplo do @esquema:soma.
+
+#describe_figure(
+  // placement: auto,
+)[
+  #figure(
+    supplement: "Esquema",
+    kind: "scheme",
+    caption: [
+      Soma entre dois números.
+    ],
+  )[
+    #equation(
+      width: 41.82%,
+    )[
+      $ 1 + 1 = 2 $
+    ]
+  ] <esquema:soma>
+]
+
+== Sub-equações
+
+Caso você queira dividir uma equação em partes diferentes, numeradas com o mesmo índice principal, você pode utilizar o pacote `equate`.
+
+Ele fornece um ambiente de mesmo nome, `equate`, e apresenta um parâmetro chamado `sub-numbering`, que deve ser preenchido como `true`.
+
+Dentro desse ambiente, você pode quebrar a equação em diferentes linhas usado o caractere `\` (contra-barra).
+Cada linha receberá um sub-índice diferente de forma incremental.
+
+Caso você, por acaso, queira exibir o símbolo de contra-barra no documento final, basta digitá-lo duas vezes em seguida, como `\\`.
+Isso será interpretado pelo Typst como apenas um `\` que se deseja exibir.
+
+Esses ambientes são exemplificados pelo @esquema:uct_adaptada abaixo, que é composto pela @equação:uct_adaptada e sua descrição.
+
+#describe_figure(
+  // placement: auto,
+  source: [
+    adaptado de
+    #cite_prose(
+      supplement: [p. 2505],
+      <swiechowski:2022:monte_carlo_tree_search>,
+    )
+    #cite_prose(supplement: [p. 486], <silver:2016:mastering_game_go>).
+  ],
+)[
+  #figure(
+    supplement: "Esquema",
+    kind: "scheme",
+    caption: [
+      Cálculo de @fitness da diretriz de @uct usada pela @mcts adaptada pelo @alphazero
+    ],
+  )[
+    #equation[
+      #equate.equate(
+        sub-numbering: true,
+      )[
+        $
+          m^* = max(m in M(s)) = Q(s,m) + X(s,m)\
+          X(s,m) = C times
+          P(s,m) / (V(s,m) + 1)
+        $ <equação:uct_adaptada>
+
+        Na qual:
+        - $m^*$ é o nó que representa o @movimento ótimo selecionado pela diretriz;
+        - $M(s)$ é o conjunto de nós que representam os @movimento:pl válidos a partir do @estado $s$, segundo as regras do @jogo;
+        - $Q(s,m)$ é a qualidade da @partida calculada por meio de simulações ao jogar o @movimento $m$ no @estado $s$;
+        - $X(s,m)$ é o componente de @exploração (#glossarium.gls-custom("exploração")) calculado ao jogar o @movimento $m$ no @estado $s$;
+        - $V(s)$ é quantidade de vezes em que o nó que guarda o @estado $s$ foi visitado nas iterações anteriores;
+        - $V(s,m)$ é a quantidade de vezes em que o nó que representa o @movimento $m$ foi visitado nas interações anteriores;
+        - $P(s,m)$ é a qualidade previamente atribuída pelo modelo de @resnet para jogar o @movimento $m$ no estado $s$;
+        - $C$ é o coeficiente que regula a relação entre @exploração e @aproveitamento.
+      ]
+    ]
+  ] <esquema:uct_adaptada>
+]
