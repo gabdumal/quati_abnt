@@ -4,25 +4,194 @@
 
 = Fundamentação teórica <capítulo:fundamentação>
 
-== Alíneas
 
-Alíneas são uma forma de dividir um parágrafo em diferentes itens em uma lista.
-A @abnt determina que o texto anterior a uma alínea, que apresenta o seu contexto, deve ser finalizado com o sinal de "dois pontos", `:`.
+== Notas
 
-A forma mais simples de utilizar alíneas é digitar o símbolo `+` antes de cada uma das linhas, como apresentado a seguir:
+Você pode adicionar notas de editor para comunicar com seus colaboradores o progresso do trabalho.
 
-+ as alíneas devem ser iniciadas em letra minúscula;
-+ cada linha deve ser finalizada em "ponto e vírgula";
-+ este é um exemplo de uma alínea muito longa; o texto das próximas linhas que se formam fica alinhado exatamente abaixo da primeira letra do texto da linha superior;
-+ A última linha deve ser finalizada em "ponto final".
+Para incluir uma nota auxiliar, deve-se utilizar um dos ambientes de definição de nota.
 
-Uma linha pode apresentar subalíneas.
-A alínea que apresentará o contexto da subalínea deve finalizar em "dois pontos", como mostrado a seguir:
+O primeiro ambiente é o `editor_note`.
+Ele permite abrir uma caixa de texto, na qual você pode escrever sua nota.
 
-+ alínea 1:
-  + subalínea 1;
-  + subalínea 2;
-+ alínea 2.
+#editor_note[
+  Nota criada com o comando `editor_note`.
+]
+
+Você também pode definir os seguintes parâmetros nas notas:
++ `fill`: cor de preenchimento da nota;
++ `stroke`: definições da borda da nota.
+
+#editor_note(
+  fill: red.lighten(75%),
+  stroke: red,
+)[
+  Nota criada com o comando `editor_note`, definindo as cores de preenchimento e da borda.
+]
+
+=== Notas prefixadas
+
+Você pode criar uma nota com um prefixo.
+Para isso, utilize o comando `editor_note`, definindo o parâmetro `prefixes` com o texto desejado no parâmetro `body`.
+
+#editor_note(
+  prefixes: (body: [Prefixo]),
+)[
+  Nota prefixada.
+]
+
+==== Personalização de notas prefixadas
+
+Você pode definir os demais atributos normalmente para uma nota com prefixo.
++ Se definir uma cor com o parâmetro `fill`, o prefixo utilizará um tom mais acinzentado dessa mesma cor.
++ Já a cor do parâmetro `stroke` é utilizada com o mesmo tom para a borda do prefixo.
+
+#editor_note(
+  fill: yellow,
+  prefixes: (body: [Prefixo]),
+  stroke: blue,
+)[
+  Nota prefixada.
+  Ela define a cor do preenchimento da nota como amarelo e sua borda como azul.
+]
+
+Você também pode definir a cor do prefixo diretamente, utilizando o parâmetro `fill` dentro da sua definição.
+
+#editor_note(
+  prefixes: (
+    body: [Prefixo],
+    fill: yellow,
+  ),
+)[
+  Nota prefixada.
+  Ela define diretamente a cor do prefixo como amarelo.
+]
+
+Sinta-se livre para editar cada uma dessas propriedades independentemente.
+
+#editor_note(
+  fill: blue.lighten(80%),
+  stroke: blue.lighten(60%),
+  prefixes: (
+    body: [Prefixo],
+    fill: yellow,
+    stroke: yellow.darken(10%),
+  ),
+)[
+  Nota prefixada.
+  Ela define a cor da nota como azul claro, e a sua cor de borda como azul comum.
+  Já o prefixo é preenchido com amarelo, e sua borda é um amarelo um pouco escurecido.
+]
+
+==== Uso de múltiplos prefixos
+
+Uma nota pode ter vários prefixos.
+Para fazer isso, basta preencher o parâmetro `prefixes` com uma lista de definições de `body` e os demais atributos de prefixo --- `fill`, e `stroke`.
+
+#editor_note(
+  prefixes: (
+    (body: [Primeiro]),
+    (body: [Segundo], fill: yellow),
+    (body: [Terceiro], stroke: blue),
+  ),
+)[
+  Nota colocada em linha.
+  Ela inclui três prefixos.
+]
+
+=== Notas de estado
+
+A biblioteca `quati_abnt` define algumas notas úteis para definir o estado de progressão de partes do texto.
+
+A primeira é chamada `todo_note`, e deve ser utilizada para indicar um afazer que ainda não teve início.
+#todo_note[
+  Tarefa a fazer.
+]
+
+A segunda é chamada `progress_note`, e deve ser utilizada para indicar um afazer que teve início, mas ainda está em progresso.
+#progress_note[
+  Tarefa em progresso.
+]
+
+A terceira é chamada `done_note`, e deve ser utilizada para indicar um afazer que foi finalizado.
+#done_note[
+  Tarefa finalizada.
+]
+
+Você também pode definir novas notas de estado no arquivo `/components.typ`.
+Neste modelo, definimos uma nota utilizada para indicar que se deve revisar determinado conteúdo, chamada `review_note`.
+#review_note[
+  Conteúdo que precisa ser revisado.
+]
+
+=== Notas de autores
+
+Você também pode definir no arquivo `/components.typ` notas para cada um dos autores. Definimos neste guia notas para o Gabriel e para a Alice.
+
+#note_from_gabriel[Nota do Gabriel.]
+#note_from_alice[Nota da Alice.]
+
+As notas de autores podem ser compostas com notas de estado. Para isso, defina o parâmetro `note` com o comando utilizado para criar a nota de estado desejada. O exemplo a seguir cria uma nota do tipo `todo_note` para o Gabriel.
+
+#note_from_gabriel(
+  note: todo_note,
+)[
+  Nota de afazeres do Gabriel.
+]
+
+=== Notas aninhadas
+
+Se preferir, você ainda pode aninhar notas de diversas formas.
+
+#editor_note[
+  #todo_note[
+    Nota de afazeres.
+  ]
+  #note_from_alice[
+    Sugestão da Alice.
+  ]
+]
+
+#todo_note[
+  #note_from_gabriel[
+    Nota do Gabriel.
+  ]
+  #note_from_alice[
+    Nota da Alice.
+  ]
+]
+
+Definimos mais duas notas padrão para representar discussões entre os editores.
+A primeira, cujo comando é `open_discussion_note`, representa uma discussão ativa.
+
+#open_discussion_note[
+  #note_from_gabriel[
+    Questionamento do Gabriel.
+  ]
+  #note_from_alice[
+    Questionamento da Alice.
+    #note_from_gabriel[
+      Resposta do Gabriel.
+    ]
+  ]
+]
+
+Já o comando `closed_discussion_note` representa uma discussão já finalizada.
+
+#closed_discussion_note[
+  #note_from_gabriel[
+    Comentário do Gabriel.
+    #note_from_alice[
+      Resposta da Alice.
+      #note_from_gabriel[
+        Réplica do Gabriel.
+        #note_from_gabriel(note: todo_note)[
+          Afazer do Gabriel baseado na discussão.
+        ]
+      ]
+    ]
+  ]
+]
 
 
 == Glossário
@@ -85,198 +254,3 @@ Você também pode definir formas no plural e com letras maiúsculas.se caso, ut
   [#get_term("link", plural: true)],
   [#get_term("link", capitalize: true, plural: true)],
 )
-
-
-== Citação
-
-#quote(
-  attribution: [
-    @dumont:1918:o_que_eu_vi_o_que_nos_veremos[p. 15].
-  ],
-  block: true,
-)[
-  --- Quero um balão de cem metros cúbicos.
-
-  Grande espanto!
-  Creio mesmo que pensaram que eu era doido.
-  Alguns meses depois, o "Brasil", com grande espanto de todos os entendidos, atravessava Paris, lindo na sua transparência, como uma grande bola de sabão
-]
-
-== Ilustração
-
-Para descrever uma ilustração, utilize o comando `describe_figure`.
-
-Por padrão, toda ilustração deve ter uma fonte, determinada pelo atributo `source`, e deve ser citada no texto.
-
-Nesse caso, é recomendado utilizar o comando `cite_prose` para incluir uma referência da bibliografia no formato de texto-livre.
-
-Veja o exemplo da @figura:quadrado_preto_com_fonte.
-Seu texto designativo aparece no texto junto com sua numeração.
-
-#describe_figure(
-  sticky: true,
-  source: [#cite_prose(<dumont:1918:o_que_eu_vi_o_que_nos_veremos>).],
-  [
-    #figure(
-      caption: [
-        Quadrado preto com fonte
-      ],
-      image(
-        width: 4.75cm,
-        "./../../assets/images/black_square.png",
-      ),
-    )<figura:quadrado_preto_com_fonte>
-  ],
-)
-
-Quando você não determinar uma fonte explicitamente, o modelo a preencherá com o texto "#source_for_content_created_by_authors()".
-Veja um exemplo na @figura:quadrado_preto_com_fonte_implícita.
-
-#describe_figure(
-  sticky: true,
-  [
-    #figure(
-      caption: [
-        Quadrado preto com fonte implícita
-      ],
-      image(
-        width: 4.75cm,
-        "./../../assets/images/black_square.png",
-      ),
-    )<figura:quadrado_preto_com_fonte_implícita>
-  ],
-)
-
-Caso você queira eliminar totalmente a descrição da fonte de uma imagem, defina o atributo `source` com o valor `false`, como na @figura:quadrado_preto_sem_fonte.
-Perceba, porém, que a @abnt exige que sempre seja  descrita a fonte.
-
-#describe_figure(
-  sticky: true,
-  source: false,
-  [
-    #figure(
-      caption: [
-        Quadrado preto sem descrição de fonte
-      ],
-      image(
-        width: 4.75cm,
-        "./../../assets/images/black_square.png",
-      ),
-    )<figura:quadrado_preto_sem_fonte>
-  ],
-)
-
-== Nota de rodapé
-
-Uma nota de rodapé pode ser inserida usando o comando `footnote`.
-Veja o exemplo a seguir.
-
-Exemplo de nota de rodapé
-#footnote[
-  #lorem(10)
-].
-
-== Nota de editor
-
-No arquivo `/components.typ`, você pode customizar as notas de editor com os nomes da sua equipe.
-
-Então, importe-as no topo do arquivo em que estiver escrevendo.
-Dessa forma, você pode abrir uma nota conforme o exemplo a seguir.
-
-#note_from_alice()[
-  Nota da Alice.
-]
-
-Você também pode usar o atributo `note` para determinar o tipo de nota desejado.
-Também é necessário importar o tipo da note no topo do arquivo.
-
-#note_from_gabriel(note: todo_note)[
-  Nota de afazeres do Gabriel.
-]
-
-#note_from_gabriel(note: progress_note)[
-  Nota em progresso do Gabriel.
-]
-
-#note_from_gabriel(note: done_note)[
-  Nota concluída do Gabriel.
-]
-
-Você pode misturar e aninhar vários estilos de nota, como melhor funcionar para o seu trabalho.
-
-#editor_note[
-  Nota básica.
-]
-
-#closed_discussion_note[
-
-  #note_from_alice[
-
-    #progress_note[
-      Progresso.
-    ]
-
-    #todo_note[
-      Afazer.
-    ]
-
-  ]
-
-  #note_from_gabriel(note: done_note)[
-    Comentário.
-  ]
-
-]
-
-#open_discussion_note[
-  #note_from_gabriel(note: todo_note)[
-    Sugestão.
-  ]
-]
-
-== Texto mono-espaçado
-
-Para inserir texto mono-espaçado, abra um bloco usando o caractere ``` ` ``` três vezes, como a seguir: ```` ``` ````.
-
-```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magnam
-aliquam quaerat voluptatem.
-```
-
-
-== Equações
-
-Uma equação pode ser descrita ao abrir um bloco com dois símbolos de `$`.
-Você pode definir um rótulo ao final de uma equação, a fim de se referir a ela no texto.
-Veja o exemplo para a @equação:soma.
-
-$ 1 + 1 = 2 $ <equação:soma>
-
-Caso deseje inserir texto na equação, utilize o comando `equation` para abrir um bloco.
-
-#equation(
-  width: 41.82%,
-)[
-  $ 1 + X = 2 $
-  + X tem o valor de 2.
-]
-
-Além disso, caso deseje dar mais destaque a uma equação, você pode usar os comandos `describe_figure` e `figure` para criar um esquema de equações.
-Veja o exemplo do @esquema:soma.
-
-#describe_figure()[
-  #figure(
-    supplement: "Esquema",
-    kind: "scheme",
-    caption: [
-      Soma entre dois números
-    ],
-  )[
-    #equation(
-      width: 41.82%,
-    )[
-      $ 1 + 1 = 2 $
-    ]
-  ] <esquema:soma>
-]
