@@ -2,3 +2,4 @@
 
 #import "@preview/quati-abnt:0.0.5" as quati-abnt
 #let glossarium = quati-abnt.common.packages.glossarium
+#import "@preview/subpar:0.2.2" as subpar
