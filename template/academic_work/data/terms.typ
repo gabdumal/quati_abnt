@@ -6,6 +6,13 @@
 // ## Definition. Definição.
 #let terms_entries = (
   (
+    key: "link",
+    short: foreign_text[link],
+    short_capitalized: foreign_text[Link],
+    plural: foreign_text[links],
+    plural_capitalized: foreign_text[Links],
+  ),
+  (
     key: "script",
     short: foreign_text[script],
     plural: foreign_text[scripts],
@@ -29,9 +36,9 @@
   term_key,
 ) => {
   get_term_in_list(
-    capitalize: false,
-    field: "short",
-    plural: false,
+    capitalize: capitalize,
+    field: field,
+    plural: plural,
     terms_entries: terms_entries,
     term_key,
   )

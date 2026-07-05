@@ -1,7 +1,91 @@
 #import "../../components.typ": *
 #import "../../packages.typ": *
 
+
 = Fundamentação teórica <capítulo:fundamentação>
+
+== Alíneas
+
+Alíneas são uma forma de dividir um parágrafo em diferentes itens em uma lista.
+A @abnt determina que o texto anterior a uma alínea, que apresenta o seu contexto, deve ser finalizado com o sinal de "dois pontos", `:`.
+
+A forma mais simples de utilizar alíneas é digitar o símbolo `+` antes de cada uma das linhas, como apresentado a seguir:
+
++ as alíneas devem ser iniciadas em letra minúscula;
++ cada linha deve ser finalizada em "ponto e vírgula";
++ este é um exemplo de uma alínea muito longa; o texto das próximas linhas que se formam fica alinhado exatamente abaixo da primeira letra do texto da linha superior;
++ A última linha deve ser finalizada em "ponto final".
+
+Uma linha pode apresentar subalíneas.
+A alínea que apresentará o contexto da subalínea deve finalizar em "dois pontos", como mostrado a seguir:
+
++ alínea 1:
+  + subalínea 1;
+  + subalínea 2;
++ alínea 2.
+
+
+== Glossário
+
+A @abnt define três tipos de listas de termos, cada uma com sua finalidade específica.
+Todas são opcionais.
+A primeira delas é a de abreviaturas e siglas, que deve constar nos elementos pré-textuais.
+A segunda é a de símbolos, que também deve constar nos elementos pré-textuais.
+A terceira é a lista de termos e definições, que deve constar nos elementos pós-textuais.
+
+Caso um termo tenha uma forma curta e uma longa, a biblioteca irá expandir as duas formas na primeira vez em que você utilizar esse termo.
+Nas seguintes, apenas as formas curtas aparecerão.
+
+Você pode definir os elementos dessas listas no arquivo `/data/glossary.typ`.
+
+=== Lista de abreviaturas e siglas
+
+Observe exemplos de termos que representam abreviaturas ou siglas.
+
+#list(
+  [@abnt],
+  [@ibge],
+  [@bi],
+)
+
+=== Lista de símbolos
+
+Observe exemplos de  termos que representam símbolos.
+É recomendado que eles apresentem uma entrada de descrição, que será exibida no glossário.
+
+#list(
+  [@emptyset],
+)
+
+=== Lista de termos e definições no glossário
+
+Observe exemplos de demais termos registrados no glossário.
+
+#list(
+  [@firewall],
+  [@aprendizado_maquina],
+  [@fitness],
+)
+
+=== Lista de termos simples, não adicionados ao glossário
+
+Caso você utilize bastante algum termo, mas não deseja que ele seja colocado em nenhuma lista de glossário, você pode defini-lo como um termo útil.
+
+Para isso, inclua-os no arquivo `/data/terms.typ`.
+Então, você pode inseri-los no texto com o comando `get_term`.
+
+Você também pode definir formas no plural e com letras maiúsculas.se caso, utilize os atributos `plural` e `capitalize` para acessá-las.
+
+#list(
+  [#get_term("script")],
+  [#get_term("software")],
+  [#get_term("web")],
+  [#get_term("link")],
+  [#get_term("link", capitalize: true)],
+  [#get_term("link", plural: true)],
+  [#get_term("link", capitalize: true, plural: true)],
+)
+
 
 == Citação
 
@@ -196,12 +280,3 @@ Veja o exemplo do @esquema:soma.
     ]
   ] <esquema:soma>
 ]
-
-== Glossário
-
-Você pode definir termos nos glossários no arquivo `/data/glossary.typ`.
-
-Exemplo de uso de texto no glossário:
-@rn.
-
-Exemplo de uso de termo útil: #get_term("software").

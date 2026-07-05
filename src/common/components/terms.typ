@@ -20,10 +20,14 @@
       if plural == false {
         entry.at("short", default: none)
       } else {
-        entry.at("plural", default: none)
+        entry.at("plural", default: entry.at("short", default: none))
       }
     } else {
-      entry.at("short_capitalized", default: none)
+      if plural == false {
+        entry.at("short_capitalized", default: entry.at("short", default: none))
+      } else {
+        entry.at("plural_capitalized", default: entry.at("short", default: none))
+      }
     }
   } else if field == "long" {
     if plural == false {

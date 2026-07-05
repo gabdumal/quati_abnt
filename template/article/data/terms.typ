@@ -8,7 +8,9 @@
   (
     key: "link",
     short: foreign_text[link],
+    short_capitalized: foreign_text[Link],
     plural: foreign_text[links],
+    plural_capitalized: foreign_text[Links],
   ),
   (
     key: "script",
