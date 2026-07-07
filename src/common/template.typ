@@ -23,9 +23,6 @@
 #let template(
   doc,
   //
-  // Color to format links.
-  color_of_links: none,
-  //
   // Font families.
   font_family_for_common_text: font_family_serif,
   font_family_for_highlighted_text: font_family_sans,
@@ -91,40 +88,6 @@
   show enum: it => {
     set enum(indent: 0em)
     it
-  }
-
-  // ## Links. Ligações.
-  show link: it => {
-    // TODO: use if type(it.dest) != label
-    if (color_of_links != none) {
-      set text(fill: color_of_links)
-      it
-    } else {
-      it
-    }
-  }
-
-  // ## Citations. Citações.
-  show cite: it => {
-    if (color_of_links != none) {
-      set text(fill: color_of_links)
-      it
-    } else {
-      it
-    }
-  }
-
-  // ## References. Referências.
-  show ref: it => {
-    // NBR 6024:2012.
-    let content = if (color_of_links != none) {
-      set text(fill: color_of_links)
-      it
-    } else {
-      it
-    }
-
-    content
   }
 
   // ## Equations. Equações.

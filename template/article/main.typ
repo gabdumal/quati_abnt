@@ -12,6 +12,12 @@
 
 
 // ## Template. Modelo.
+#show: it => quati-abnt.link.template(
+  it,
+  // Define the color of links and cross-references.
+  // Defina a cor dos links e das referências cruzadas.
+  color_of_links: quati-abnt.link.color_of_links,
+)
 #show: it => quati-abnt.bibliography.template(
   it,
 )
@@ -26,10 +32,6 @@
 )
 #show: it => quati-abnt.article.template(
   it,
-
-  // Define the color of links and cross-references.
-  // Defina a cor dos links e das referências cruzadas.
-  color_of_links: quati-abnt.common.style.color_of_links,
 
   // Define the font family to be used on each context.
   // Defina a família tipográfica a ser utilizada em cada contexto.

@@ -2,6 +2,7 @@
 
 #import "../common/style.typ": font_family_sans, simple_spacing_for_smaller_text
 
+
 // ## States. Estados.
 #let font_family_for_notes_state = state("quati_abnt_font_family_for_notes", font_family_sans)
 #let should_display_notes_state = state("quati_abnt_should_display_notes", true)
@@ -320,6 +321,7 @@
   font_family_for_notes: font_family_sans,
   // Whether to display editor notes.
   should_display_notes: true,
+  //
   doc,
 ) = {
   font_family_for_notes_state.update(font_family_for_notes)

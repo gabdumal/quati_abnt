@@ -6,9 +6,6 @@
 #let template(
   doc,
   //
-  // Color to format links.
-  color_of_links: none,
-  //
   // Font families.
   font_family_for_common_text: font_family_serif,
   font_family_for_highlighted_text: font_family_sans,
@@ -54,7 +51,6 @@
 
   common_template(
     doc,
-    color_of_links: color_of_links,
     font_family_for_common_text: font_family_for_common_text,
     font_family_for_highlighted_text: font_family_for_highlighted_text,
     font_family_for_math_text: font_family_for_math_text,
