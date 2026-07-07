@@ -45,11 +45,6 @@
 // ### Smaller text. Texto menor.
 // Spacing of 1 must be used for: quotations with more than 3 lines, footnotes, nature, references and information of figures and tables. We interpret that nature should also use this leading.
 #let simple_spacing_for_smaller_text = font_size_for_smaller_text * spacing_of_one
-//
-// ### Bibliography. Referências.
-// NBR 6023:2025 6.3.
-// There must be a blank space of 1 simple line between bibliography entries.
-#let spacing_for_bibliography = font_size_for_common_text * spacing_of_one * 2
 
 // ## Leading. Entrelinha.
 // NBR 14724:2024 5.2.
@@ -66,11 +61,7 @@
 // ### Smaller text. Texto menor.
 // Leading of 1 must be used for: quotations with more than 3 lines, footnotes, nature, references and information of figures and tables. We interpret that nature should also use this leading.
 #let simple_leading_for_smaller_text = font_size_for_smaller_text * leading_of_one
-//
-// ### Bibliography. Referências.
-// NBR 6023:2025 6.3.
-// Leading of 1 must be used for bibliography.
-#let leading_for_bibliography = font_size_for_common_text * leading_of_one
+
 
 // ## Figures. Figuras.
 #let spacing_around_figure = spacing_for_common_text
