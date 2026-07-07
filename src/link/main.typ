@@ -25,7 +25,9 @@
 
   // ### Citations. Citações.
   show cite: it => {
-    if (color_of_links != none) {
+    if (
+      color_of_links != none and it.form != "full"
+    ) {
       set text(fill: color_of_links)
       it
     } else {
