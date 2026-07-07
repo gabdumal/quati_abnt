@@ -46,5 +46,16 @@
     content
   }
 
+  // ### Footnotes. Notas de rodapé.
+  show footnote: it => {
+    let content = if (color_of_links != none) {
+      set text(fill: color_of_links)
+      it
+    } else {
+      it
+    }
+
+    content
+  }
   doc
 }
