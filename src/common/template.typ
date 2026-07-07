@@ -14,7 +14,10 @@
 )
 
 
-#let should_use_larger_text_to_highlight_state = state("quati_abnt_should_use_larger_text_to_highlight", true)
+#let should_use_larger_text_instead_of_uppercase_to_highlight_state = state(
+  "quati_abnt_should_use_larger_text_instead_of_uppercase_to_highlight",
+  true,
+)
 
 
 #let template(
@@ -30,14 +33,16 @@
   font_family_for_monospaced_text: font_family_mono,
   //
   // Whether to use uppercase as typographic highlight.
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
 ) = {
   font_family_for_common_text_state.update(font_family_for_common_text)
   font_family_for_highlighted_text_state.update(font_family_for_highlighted_text)
   font_family_for_math_text_state.update(font_family_for_math_text)
   font_family_for_monospaced_text_state.update(font_family_for_monospaced_text)
 
-  should_use_larger_text_to_highlight_state.update(should_use_larger_text_to_highlight)
+  should_use_larger_text_instead_of_uppercase_to_highlight_state.update(
+    should_use_larger_text_instead_of_uppercase_to_highlight,
+  )
 
   // ## Page. Página.
   set page(

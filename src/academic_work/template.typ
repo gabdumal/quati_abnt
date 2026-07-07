@@ -17,7 +17,7 @@
   font_family_for_monospaced_text: font_family_mono,
   //
   // Whether to use uppercase as typographic highlight.
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
   //
   // Whether to print content on the back of pages.
   should_consider_only_odd_pages: true,
@@ -64,7 +64,7 @@
   // ### Format. Formatação.
   show heading: it => {
     format_heading(
-      should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
+      should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
       it,
     )
   }
@@ -76,6 +76,6 @@
     font_family_for_highlighted_text: font_family_for_highlighted_text,
     font_family_for_math_text: font_family_for_math_text,
     font_family_for_monospaced_text: font_family_for_monospaced_text,
-    should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
+    should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
   )
 }

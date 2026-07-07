@@ -8,7 +8,7 @@
   font_size_for_larger_text, font_size_for_smaller_text, leading_for_larger_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_larger_text,
 )
-#import "../../../common/template.typ": should_use_larger_text_to_highlight_state
+#import "../../../common/template.typ": should_use_larger_text_instead_of_uppercase_to_highlight_state
 #import "../../components/advisors.typ": get_advisor_role
 #import "../../components/examiner.typ": print_examiner
 #import "../../components/heading.typ": not_start_on_new_page
@@ -187,9 +187,9 @@
           #set text(weight: "bold")
           #let content = [Banca examinadora]
 
-          #let should_use_larger_text_to_highlight = should_use_larger_text_to_highlight_state.get()
+          #let should_use_larger_text_instead_of_uppercase_to_highlight = should_use_larger_text_instead_of_uppercase_to_highlight_state.get()
 
-          #if should_use_larger_text_to_highlight {
+          #if should_use_larger_text_instead_of_uppercase_to_highlight {
             set par(
               leading: leading_for_larger_text,
               spacing: spacing_for_larger_text,

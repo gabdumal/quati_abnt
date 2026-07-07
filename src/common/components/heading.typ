@@ -7,7 +7,7 @@
 )
 
 #let get_styling_for_heading(
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
   body,
 ) = {
   // NBR 6024:2012 4.1.
@@ -23,7 +23,7 @@
 
   if body.level == 1 {
     font_weight = "bold"
-    if should_use_larger_text_to_highlight {
+    if should_use_larger_text_instead_of_uppercase_to_highlight {
       font_size = font_size_for_larger_text
       let leading = leading_for_larger_text
       let spacing = spacing_for_larger_text
@@ -31,7 +31,7 @@
       should_capitalize = true
     }
   } else if body.level == 2 {
-    if should_use_larger_text_to_highlight {
+    if should_use_larger_text_instead_of_uppercase_to_highlight {
       font_size = font_size_for_larger_text
       let leading = leading_for_larger_text
       let spacing = spacing_for_larger_text
@@ -70,7 +70,7 @@
 }
 
 #let format_heading(
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
   body,
 ) = context {
   // NBR 14724:2024 5.2.2.
@@ -88,7 +88,7 @@
     text_style,
     should_underline,
   ) = get_styling_for_heading(
-    should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
+    should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
     body,
   )
   let text_before_numbering = none

@@ -42,7 +42,7 @@
 
   // Define whether to use larger text as typographic highlight instead of uppercase.
   // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
 
   // Define whether to format for electronic file only (true), or to print (false).
   // Defina se deve usar a formatação para apenas arquivos eletrônicos (true), ou para a impressão (false).

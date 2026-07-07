@@ -3,7 +3,7 @@
 
 #import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../../../common/components/heading.typ": capitalize_or_underline_if_needed, get_styling_for_heading
-#import "../../../common/template.typ": should_use_larger_text_to_highlight_state
+#import "../../../common/template.typ": should_use_larger_text_instead_of_uppercase_to_highlight_state
 #import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/page.typ": not_number_page, should_consider_only_odd_pages
 
@@ -27,7 +27,7 @@
             text_style,
             should_underline,
           ) = get_styling_for_heading(
-            should_use_larger_text_to_highlight: should_use_larger_text_to_highlight_state.get(),
+            should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight_state.get(),
             it,
           )
 
