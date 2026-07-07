@@ -12,6 +12,9 @@
 
 
 // ## Template. Modelo.
+#show: it => quati-abnt.bibliography.template(
+  it,
+)
 #show: it => quati-abnt.article.template(
   it,
 

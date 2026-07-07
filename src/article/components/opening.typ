@@ -5,7 +5,7 @@
   font_family_for_common_text_state, font_family_for_highlighted_text_state,
 )
 #import "../../common/components/title.typ": print_title
-#import "../../common/style/style.typ": (
+#import "../../common/style.typ": (
   font_size_for_common_text, font_size_for_larger_text, leading_for_common_text, leading_for_larger_text,
   spacing_for_common_text, spacing_for_larger_text,
 )

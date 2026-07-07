@@ -53,7 +53,7 @@
 // NBR 6022:2018 5.3.5
 
 #include_acknowledgements[
-  #lorem(10)
+  Agradecemos ao Grupo de Educação Tutorial em Sistemas de Informação (GetSi) da Universidade Federal de Juiz de Fora (UFJF) por prover bolsas de apoio na graduação que possibilitaram a realização deste trabalho.
 ]
 
 // ====================

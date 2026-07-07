@@ -1,7 +1,7 @@
 // # Quotes. Citações.
 // NBR 14724:2024 5.5, NBR 10520:2023 7.1.1.
 
-#import "../style/style.typ": (
+#import "../style.typ": (
   font_size_for_common_text, font_size_for_smaller_text, leading_for_common_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_common_text,
 )

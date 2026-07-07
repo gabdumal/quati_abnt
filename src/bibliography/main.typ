@@ -1,7 +1,8 @@
 // # Bibliography. Referências.
 // NBR 6023:2025 6, NBR 14724:2024 4.2.3.1
 
-#import "../style/style.typ": leading_for_bibliography, spacing_for_bibliography
+#import "../common/style.typ": leading_for_bibliography, spacing_for_bibliography
+
 
 #let format_bibliography(body) = {
   set par(
@@ -10,6 +11,7 @@
   )
   body
 }
+
 
 // ## Prose citation. Citação em prosa.
 // NBR 10520:2023.
@@ -21,7 +23,22 @@
   cite(
     form: "prose",
     supplement: supplement,
-    style: "../style/bibliography_style_prose.csl",
+    style: "./bibliography_style_prose.csl",
     key,
   )
+}
+
+
+// ## Template. Modelo.
+#let template(
+  doc,
+) = {
+  set bibliography(
+    // The bibliography should be formatted according to the ABNT style
+    style: "./bibliography_style.csl",
+    title: "Referências",
+  )
+  show bibliography: it => format_bibliography(it)
+
+  doc
 }

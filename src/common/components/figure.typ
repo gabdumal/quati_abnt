@@ -1,7 +1,7 @@
 // # Figures. Figuras.
 // NBR 14724:2024 5.8, NBR 14724:2024 5.9
 
-#import "../style/style.typ": (
+#import "../style.typ": (
   font_size_for_common_text, font_size_for_smaller_text, leading_for_common_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_around_figure, spacing_for_common_text,
 )

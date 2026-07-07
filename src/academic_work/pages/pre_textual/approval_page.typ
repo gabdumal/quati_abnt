@@ -4,7 +4,7 @@
 #import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../../../common/components/gender.typ": get_gender_ending
 #import "../../../common/components/title.typ": print_title
-#import "../../../common/style/style.typ": (
+#import "../../../common/style.typ": (
   font_size_for_larger_text, font_size_for_smaller_text, leading_for_larger_text, simple_leading_for_smaller_text,
   simple_spacing_for_smaller_text, spacing_for_larger_text,
 )

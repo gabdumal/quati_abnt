@@ -1,6 +1,5 @@
 // # Template. Modelo.
 
-#import "./components/bibliography.typ": format_bibliography
 #import "./components/editor_note.typ": should_display_editor_notes_state
 #import "./components/figure.typ": figure_with_spacing_around
 #import "components/font_family.typ": (
@@ -11,7 +10,7 @@
 #import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
-#import "./style/style.typ": (
+#import "style.typ": (
   font_size_for_common_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
   paper_size, simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
 )
@@ -169,15 +168,6 @@
   show footnote.entry: it => {
     format_footnote_entry(it)
   }
-
-  // ## Bibliography. Referências.
-  // NBR 6023:2025 6, NBR 14724:2024 4.2.3.1
-  set bibliography(
-    // The bibliography should be formatted according to the ABNT style
-    style: "./style/bibliography_style.csl",
-    title: "Referências",
-  )
-  show bibliography: it => format_bibliography(it)
 
   doc
 }
