@@ -6,13 +6,13 @@ Compose documents according to ABNT standards.
 
 In order to create a new project using this template, you can either:
 
-- use the following command when running typst **locally**;
+- select [this template](https://typst.app/universe/package/quati-abnt) on the Typst **web app**;
+
+- or use the following command when running typst **locally**.
 
 ```bash
 typst init @preview/quati-abnt:0.1.1
 ```
-
-- or select [this template](https://typst.app/universe/package/quati-abnt) on the Typst **web app**.
 
 This will create two folders: `article`, intended for scientific papers, and `academic_work`, intended for dissertations, theses, and monographs.
 
@@ -47,6 +47,18 @@ To render the paper, select the `/main.typ` file.
 This file initializes the template, offering options to configure it.
 
 ```typst
+#show: it => quati-abnt.bibliography.template(
+  it,
+)
+#show: it => quati-abnt.note.template(
+  it,
+  // Define the font family.
+  // Defina a família tipográfica.
+  font_family_for_notes: quati-abnt.common.style.font_family_sans,
+  // Define whether to display editor notes.
+  // Defina se deve exibir as notas de editor.
+  should_display_notes: true,
+)
 #show: it => quati-abnt.article.template(
   it,
 
@@ -60,7 +72,6 @@ This file initializes the template, offering options to configure it.
   font_family_for_highlighted_text: quati-abnt.common.style.font_family_sans,
   font_family_for_math_text: quati-abnt.common.style.font_family_math,
   font_family_for_monospaced_text: quati-abnt.common.style.font_family_mono,
-  font_family_for_editor_notes: quati-abnt.common.style.font_family_sans,
 
   // Define whether to use larger text as typographic highlight instead of uppercase.
   // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
@@ -69,10 +80,6 @@ This file initializes the template, offering options to configure it.
   // Define whether to count pages and place its numbers at the headers.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
-
-  // Define whether to display editor notes.
-  // Defina se deve exibir as notas de editor.
-  should_display_editor_notes: true,
 )
 ```
 

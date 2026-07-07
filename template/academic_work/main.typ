@@ -17,6 +17,15 @@
 #show: it => quati-abnt.bibliography.template(
   it,
 )
+#show: it => quati-abnt.note.template(
+  it,
+  // Define the font family.
+  // Defina a família tipográfica.
+  font_family_for_notes: quati-abnt.common.style.font_family_sans,
+  // Define whether to display editor notes.
+  // Defina se deve exibir as notas de editor.
+  should_display_notes: true,
+)
 #show: it => quati-abnt.academic_work.template(
   it,
 
@@ -30,7 +39,6 @@
   font_family_for_highlighted_text: quati-abnt.common.style.font_family_sans,
   font_family_for_math_text: quati-abnt.common.style.font_family_math,
   font_family_for_monospaced_text: quati-abnt.common.style.font_family_mono,
-  font_family_for_editor_notes: quati-abnt.common.style.font_family_sans,
 
   // Define whether to use larger text as typographic highlight instead of uppercase.
   // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
@@ -43,24 +51,22 @@
   // Define whether to count pages and place its numbers at the headers.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
-
-  // Define whether to display editor notes.
-  // Defina se deve exibir as notas de editor.
-  should_display_editor_notes: true,
 )
 
 
-// ## External elements. Elementos externos.
+// ## Content. Conteúdo.
+
+// ### External elements. Elementos externos.
 #include "./content/external.typ"
 
-// ## Pre-textual elements. Elementos pré-textuais.
+// ### Pre-textual elements. Elementos pré-textuais.
 #include "./content/pre_textual.typ"
 
-// ## Textual elements. Elementos textuais.
+// ### Textual elements. Elementos textuais.
 #include "./content/textual/main.typ"
 
-// ## Bibliography. Referências.
+// ### Bibliography. Referências.
 #bibliography("./data/bibliography.bib")
 
-// # Post-textual elements. Elementos pós-textuais.
+// ### Post-textual elements. Elementos pós-textuais.
 #include "./content/post_textual.typ"

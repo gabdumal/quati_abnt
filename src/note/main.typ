@@ -1,10 +1,13 @@
 // # Note. Nota.
 
-#import "../components/font_family.typ": font_family_for_editor_notes_state
-#import "../style.typ": simple_spacing_for_smaller_text
+#import "../common/style.typ": font_family_sans, simple_spacing_for_smaller_text
 
-#let should_display_editor_notes_state = state("quati_abnt_should_display_editor_notes", true)
+// ## States. Estados.
+#let font_family_for_notes_state = state("quati_abnt_font_family_for_notes", font_family_sans)
+#let should_display_notes_state = state("quati_abnt_should_display_notes", true)
 
+
+// ## Style. Estilo.
 #let color_of_fill_of_notes = oklch(100%, 0, 90deg)
 #let paint_of_stroke_of_notes = oklch(80.78%, 0, 0deg)
 #let thickness_of_stroke_of_notes = 1.5pt
@@ -35,6 +38,8 @@
   paint_of_stroke_of_notes + thickness_of_stroke_of_notes,
 )
 
+
+// ## Layout. Leiaute.
 #let join_strokes = (
   new_stroke: none,
   old_stroke: stroke_of_notes,
@@ -142,9 +147,9 @@
   stroke: none,
   it,
 ) = context {
-  if (should_display_editor_notes_state.get() == true) {
+  if (should_display_notes_state.get() == true) {
     set text(
-      font: font_family_for_editor_notes_state.get(),
+      font: font_family_for_notes_state.get(),
     )
     set par(first-line-indent: 0pt)
     block(
@@ -202,6 +207,8 @@
   }
 }
 
+
+// ## Components. Componentes.
 #let editor_note = (
   fill: color_of_fill_of_notes,
   prefixes: none,
@@ -304,4 +311,19 @@
     stroke: color.saturate(25%),
     it,
   )
+}
+
+
+// ## Template. Modelo.
+#let template(
+  // Font family.
+  font_family_for_notes: font_family_sans,
+  // Whether to display editor notes.
+  should_display_notes: true,
+  doc,
+) = {
+  font_family_for_notes_state.update(font_family_for_notes)
+  should_display_notes_state.update(should_display_notes)
+
+  doc
 }

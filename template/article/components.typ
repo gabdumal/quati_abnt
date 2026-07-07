@@ -3,13 +3,12 @@
 #import "./data/terms.typ": get_term
 #import "./packages.typ": (
   quati-abnt.article.components.print_people, quati-abnt.article.components.print_person,
-  quati-abnt.common.components.cite_prose, quati-abnt.common.components.closed_discussion_note,
-  quati-abnt.common.components.create_status_note, quati-abnt.common.components.describe_figure,
-  quati-abnt.common.components.done_note, quati-abnt.common.components.editor_note,
+  quati-abnt.bibliography.cite_prose, quati-abnt.common.components.describe_figure,
   quati-abnt.common.components.equation, quati-abnt.common.components.foreign_text,
-  quati-abnt.common.components.format_table, quati-abnt.common.components.open_discussion_note,
-  quati-abnt.common.components.progress_note, quati-abnt.common.components.source_for_content_created_by_authors,
-  quati-abnt.common.components.todo_note,
+  quati-abnt.common.components.format_table, quati-abnt.common.components.source_for_content_created_by_authors,
+  quati-abnt.note.closed_discussion_note, quati-abnt.note.create_status_note, quati-abnt.note.done_note,
+  quati-abnt.note.editor_note, quati-abnt.note.open_discussion_note, quati-abnt.note.progress_note,
+  quati-abnt.note.todo_note,
 )
 
 

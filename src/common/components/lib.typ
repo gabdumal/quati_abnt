@@ -3,9 +3,6 @@
 #import "./abstract.typ": include_abstract
 #import "./annex.typ": include_annex
 #import "./appendix.typ": include_appendix
-#import "./editor_note.typ": (
-  closed_discussion_note, create_status_note, done_note, editor_note, open_discussion_note, progress_note, todo_note,
-)
 #import "./equation.typ": equation
 #import "./figure.typ": describe_figure
 #import "./foreign_text.typ": foreign_text
@@ -16,6 +13,3 @@
 #import "./terms.typ": get_term_in_list
 #import "./text.typ": capitalize_first_letter
 #import "./title.typ": print_title
-
-// ## Bibliography. Bibliografia.
-#import "../../bibliography/lib.typ": cite_prose

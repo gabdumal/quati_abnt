@@ -15,7 +15,6 @@
   font_family_for_highlighted_text: font_family_sans,
   font_family_for_math_text: font_family_math,
   font_family_for_monospaced_text: font_family_mono,
-  font_family_for_editor_notes: font_family_sans,
   //
   // Whether to use uppercase as typographic highlight.
   should_use_larger_text_to_highlight: false,
@@ -25,9 +24,6 @@
   //
   // Whether to number pages and print its number on the header.
   should_number_pages: false,
-  //
-  // Whether to display editor notes.
-  should_display_editor_notes: true,
 ) = {
   should_consider_only_odd_pages_state.update(should_consider_only_odd_pages)
 
@@ -80,8 +76,6 @@
     font_family_for_highlighted_text: font_family_for_highlighted_text,
     font_family_for_math_text: font_family_for_math_text,
     font_family_for_monospaced_text: font_family_for_monospaced_text,
-    font_family_for_editor_notes: font_family_for_editor_notes,
     should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
-    should_display_editor_notes: should_display_editor_notes,
   )
 }

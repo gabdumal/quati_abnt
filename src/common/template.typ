@@ -1,11 +1,9 @@
 // # Template. Modelo.
 
-#import "./components/editor_note.typ": should_display_editor_notes_state
 #import "./components/figure.typ": figure_with_spacing_around
-#import "components/font_family.typ": (
-  font_family_for_common_text_state, font_family_for_editor_notes_state, font_family_for_highlighted_text_state,
-  font_family_for_math_text_state, font_family_for_monospaced_text_state, font_family_math, font_family_mono,
-  font_family_sans, font_family_serif,
+#import "./components/font_family.typ": (
+  font_family_for_common_text_state, font_family_for_highlighted_text_state, font_family_for_math_text_state,
+  font_family_for_monospaced_text_state, font_family_math, font_family_mono, font_family_sans, font_family_serif,
 )
 #import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
@@ -30,22 +28,16 @@
   font_family_for_highlighted_text: font_family_sans,
   font_family_for_math_text: font_family_math,
   font_family_for_monospaced_text: font_family_mono,
-  font_family_for_editor_notes: font_family_sans,
   //
   // Whether to use uppercase as typographic highlight.
   should_use_larger_text_to_highlight: false,
-  // Whether to display editor notes.
-  should_display_editor_notes: true,
 ) = {
   font_family_for_common_text_state.update(font_family_for_common_text)
   font_family_for_highlighted_text_state.update(font_family_for_highlighted_text)
   font_family_for_math_text_state.update(font_family_for_math_text)
   font_family_for_monospaced_text_state.update(font_family_for_monospaced_text)
-  font_family_for_editor_notes_state.update(font_family_for_editor_notes)
 
   should_use_larger_text_to_highlight_state.update(should_use_larger_text_to_highlight)
-
-  should_display_editor_notes_state.update(should_display_editor_notes)
 
   // ## Page. Página.
   set page(

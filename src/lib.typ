@@ -1,6 +1,7 @@
 // # Library. Biblioteca.
 
-#import "academic_work/lib.typ" as academic_work
-#import "article/lib.typ" as article
+#import "./academic_work/lib.typ" as academic_work
+#import "./article/lib.typ" as article
 #import "./bibliography/lib.typ" as bibliography
-#import "common/lib.typ" as common
+#import "./common/lib.typ" as common
+#import "./note/lib.typ" as note
