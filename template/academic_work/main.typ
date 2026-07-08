@@ -23,6 +23,9 @@
 #show: it => quati-abnt.bibliography.template(
   it,
 )
+#show: it => quati-abnt.footnote.template(
+  it,
+)
 #show: it => quati-abnt.note.template(
   it,
   // Define the font family.

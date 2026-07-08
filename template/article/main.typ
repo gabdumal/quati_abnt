@@ -18,9 +18,8 @@
   // Defina a cor dos links e das referências cruzadas.
   color_of_links: quati-abnt.link.color_of_links,
 )
-#show: it => quati-abnt.bibliography.template(
-  it,
-)
+#show: it => quati-abnt.bibliography.template(it)
+#show: it => quati-abnt.footnote.template(it)
 #show: it => quati-abnt.note.template(
   it,
   // Define the font family.

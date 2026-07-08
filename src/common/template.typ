@@ -5,12 +5,11 @@
   font_family_for_common_text_state, font_family_for_highlighted_text_state, font_family_for_math_text_state,
   font_family_for_monospaced_text_state, font_family_math, font_family_mono, font_family_sans, font_family_serif,
 )
-#import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
 #import "style.typ": (
-  font_size_for_common_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
-  paper_size, simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
+  base_font_size, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text, paper_size,
+  simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
 )
 
 
@@ -51,11 +50,15 @@
     lang: "pt",
     region: "br",
     font: font_family_for_common_text,
-    size: font_size_for_common_text,
+    size: base_font_size,
     hyphenate: true,
   )
-  show raw: set text(font: font_family_for_monospaced_text)
-  show math.equation: set text(font: font_family_for_math_text)
+  show raw: set text(
+    font: font_family_for_monospaced_text,
+  )
+  show math.equation: set text(
+    font: font_family_for_math_text,
+  )
 
   // ## Paragraphs. Parágrafos.
   set par(
@@ -115,18 +118,6 @@
     } else {
       it
     }
-  }
-
-  // ## Footnotes. Notas de rodapé.
-  // NBR 14724:2024 5.2.1
-  set footnote.entry(
-    gap: simple_leading_for_smaller_text,
-    clearance: simple_spacing_for_smaller_text,
-    separator: line(length: 5cm),
-    indent: 0cm,
-  )
-  show footnote.entry: it => {
-    format_footnote_entry(it)
   }
 
   doc

@@ -4,5 +4,6 @@
 #import "./article/lib.typ" as article
 #import "./bibliography/lib.typ" as bibliography
 #import "./common/lib.typ" as common
+#import "./footnote/lib.typ" as footnote
 #import "./link/lib.typ" as link
 #import "./note/lib.typ" as note
