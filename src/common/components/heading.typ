@@ -1,9 +1,9 @@
 // # Headings. Títulos.
 
-#import "../../common/components/font_family.typ": font_family_for_highlighted_text_state
+#import "../../common/components/font_family.typ": base_font_size_state, font_family_for_highlighted_text_state
 #import "../style.typ": (
-  font_size_for_common_text, font_size_for_larger_text, leading_for_common_text, leading_for_larger_text,
-  spacing_for_common_text, spacing_for_larger_text,
+  font_size_for_larger_text, leading_for_common_text, leading_for_larger_text, spacing_for_common_text,
+  spacing_for_larger_text,
 )
 
 #let get_styling_for_heading(
@@ -13,7 +13,7 @@
   // NBR 6024:2012 4.1.
   // The format of headings should represent their hierarchical level.
 
-  let font_size = font_size_for_common_text
+  let font_size = base_font_size_state.get()
   let leading = leading_for_common_text
   let spacing = spacing_for_common_text
   let font_weight = "regular"

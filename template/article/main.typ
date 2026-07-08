@@ -1,16 +1,14 @@
-// # Academic Work. Trabalho Acadêmico.
-// NBR 14724:2024
+// # Article. Artigo.
+// NBR 6022:2018
 
 #import "./components.typ": *
-#import "./data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
+#import "./data/glossary.typ": glossaries_entries
 #import "./packages.typ": *
 
 
 // ## Glossary. Glossário.
 #show: glossarium.make-glossary
-#glossarium.register-glossary(abbreviations_entries)
-#glossarium.register-glossary(symbols_entries)
-#glossarium.register-glossary(glossary_entries)
+#glossarium.register-glossary(glossaries_entries)
 
 
 // ## Template. Modelo.
@@ -30,7 +28,7 @@
   // Defina se deve exibir as notas de editor.
   should_display_notes: true,
 )
-#show: it => quati-abnt.academic_work.template(
+#show: it => quati-abnt.article.template(
   it,
 
   // Define the font size for common text.
@@ -48,10 +46,6 @@
   // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
   should_use_larger_text_instead_of_uppercase_to_highlight: false,
 
-  // Define whether to format for electronic file only (true), or to print (false).
-  // Defina se deve usar a formatação para apenas arquivos eletrônicos (true), ou para a impressão (false).
-  should_consider_only_odd_pages: true,
-
   // Define whether to count pages and place its numbers at the headers.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
@@ -60,9 +54,6 @@
 
 
 // ## Content. Conteúdo.
-
-// ### External elements. Elementos externos.
-#include "./content/external.typ"
 
 // ### Pre-textual elements. Elementos pré-textuais.
 #include "./content/pre_textual.typ"

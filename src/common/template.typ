@@ -2,14 +2,15 @@
 
 #import "./components/figure.typ": figure_with_spacing_around
 #import "./components/font_family.typ": (
-  font_family_for_common_text_state, font_family_for_highlighted_text_state, font_family_for_math_text_state,
-  font_family_for_monospaced_text_state, font_family_math, font_family_mono, font_family_sans, font_family_serif,
+  base_font_size_state, font_family_for_common_text_state, font_family_for_highlighted_text_state,
+  font_family_for_math_text_state, font_family_for_monospaced_text_state, font_family_math, font_family_mono,
+  font_family_sans, font_family_serif,
 )
 #import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
 #import "style.typ": (
-  font_size_for_common_text, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text,
-  paper_size, simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
+  base_font_size, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text, paper_size,
+  simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
 )
 
 
@@ -21,6 +22,9 @@
 
 #let template(
   doc,
+  //
+  // Base font size.
+  base_font_size: base_font_size,
   //
   // Font families.
   font_family_for_common_text: font_family_serif,
@@ -39,6 +43,7 @@
   should_use_larger_text_instead_of_uppercase_to_highlight_state.update(
     should_use_larger_text_instead_of_uppercase_to_highlight,
   )
+  base_font_size_state.update(base_font_size)
 
   // ## Page. Página.
   set page(
@@ -50,11 +55,15 @@
     lang: "pt",
     region: "br",
     font: font_family_for_common_text,
-    size: font_size_for_common_text,
+    size: base_font_size,
     hyphenate: true,
   )
-  show raw: set text(font: font_family_for_monospaced_text)
-  show math.equation: set text(font: font_family_for_math_text)
+  show raw: set text(
+    font: font_family_for_monospaced_text,
+  )
+  show math.equation: set text(
+    font: font_family_for_math_text,
+  )
 
   // ## Paragraphs. Parágrafos.
   set par(

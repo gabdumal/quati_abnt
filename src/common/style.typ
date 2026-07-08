@@ -25,10 +25,12 @@
 
 // ## Font size. Tamanho da fonte.
 // NBR 14724:2024 5.1, NBR 6022:2018 6.1.
-#let font_size_for_larger_text = 13pt
-#let font_size_for_common_text = 12pt
+#let base_font_size = 12pt
+//
+#let font_size_for_larger_text = 1.083333em
+#let font_size_for_common_text = 1em
 // Smaller text must be used for: quotations with more than 3 lines, footnotes, page numbering, cataloging-in-publication, references and information of figures and tables.
-#let font_size_for_smaller_text = 11pt
+#let font_size_for_smaller_text = 0.916667em
 
 // ## Spacing. Espaçamento.
 // NBR 14724:2024 5.2, NBR 6022:2018 6.1.
