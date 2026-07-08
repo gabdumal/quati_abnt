@@ -9,6 +9,17 @@ main = "file:examples/academic_work/guide/main.typ"
 root = "file:."
 system-fonts = true
 
+[[document]]
+id = "file:template/article/main.typ"
+inputs = []
+main = "file:template/article/main.typ"
+root = "file:."
+system-fonts = true
+
 [[route]]
 id = "file:examples/academic_work/guide/main.typ"
+priority = 256
+
+[[route]]
+id = "file:template/article/main.typ"
 priority = 256

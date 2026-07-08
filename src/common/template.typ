@@ -5,7 +5,6 @@
   font_family_for_common_text_state, font_family_for_highlighted_text_state, font_family_for_math_text_state,
   font_family_for_monospaced_text_state, font_family_math, font_family_mono, font_family_sans, font_family_serif,
 )
-#import "./components/footnote.typ": format_footnote_entry
 #import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
 #import "style.typ": (
@@ -115,18 +114,6 @@
     } else {
       it
     }
-  }
-
-  // ## Footnotes. Notas de rodapé.
-  // NBR 14724:2024 5.2.1
-  set footnote.entry(
-    gap: simple_leading_for_smaller_text,
-    clearance: simple_spacing_for_smaller_text,
-    separator: line(length: 5cm),
-    indent: 0cm,
-  )
-  show footnote.entry: it => {
-    format_footnote_entry(it)
   }
 
   doc
