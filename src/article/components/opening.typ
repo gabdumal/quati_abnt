@@ -35,7 +35,7 @@
     font: font_family_for_highlighted_text_state.get(),
   )
   set par(
-    first-line-indent: 0pt,
+    first-line-indent: 0cm,
   )
 
   align(center)[
