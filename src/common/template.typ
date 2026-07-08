@@ -2,8 +2,9 @@
 
 #import "./components/figure.typ": figure_with_spacing_around
 #import "./components/font_family.typ": (
-  font_family_for_common_text_state, font_family_for_highlighted_text_state, font_family_for_math_text_state,
-  font_family_for_monospaced_text_state, font_family_math, font_family_mono, font_family_sans, font_family_serif,
+  base_font_size_state, font_family_for_common_text_state, font_family_for_highlighted_text_state,
+  font_family_for_math_text_state, font_family_for_monospaced_text_state, font_family_math, font_family_mono,
+  font_family_sans, font_family_serif,
 )
 #import "./components/heading.typ": format_heading
 #import "./components/quote.typ": format_quote
@@ -22,6 +23,9 @@
 #let template(
   doc,
   //
+  // Base font size.
+  base_font_size: base_font_size,
+  //
   // Font families.
   font_family_for_common_text: font_family_serif,
   font_family_for_highlighted_text: font_family_sans,
@@ -39,6 +43,7 @@
   should_use_larger_text_instead_of_uppercase_to_highlight_state.update(
     should_use_larger_text_instead_of_uppercase_to_highlight,
   )
+  base_font_size_state.update(base_font_size)
 
   // ## Page. Página.
   set page(

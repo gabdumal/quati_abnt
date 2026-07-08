@@ -4,11 +4,16 @@
 #import "../common/style.typ": (
   font_size_for_smaller_text, simple_leading_for_smaller_text, simple_spacing_for_smaller_text,
 )
+#import "../common/components/font_family.typ": base_font_size_state
 
 
 // ## Template. Modelo.
 #let template(
   doc,
+  //
+  // Base font size.
+  base_font_size: none,
+  //
 ) = {
   set footnote.entry(
     gap: simple_leading_for_smaller_text,
@@ -17,9 +22,7 @@
     indent: 0em,
   )
 
-  show footnote.entry: it => {
-    set text(size: font_size_for_smaller_text)
-
+  show footnote.entry: it => context {
     let number = numbering(
       it.note.numbering,
       ..counter(
@@ -34,7 +37,7 @@
     )
     let body = it.note.body
 
-    block(
+    let footnote_block = block(
       inset: (left: it.indent),
       grid(
         columns: (auto, 1fr),
@@ -42,6 +45,14 @@
         prefix, body,
       ),
     )
+
+    if base_font_size != none {
+      set text(size: base_font_size_state.get())
+      set text(size: font_size_for_smaller_text)
+      footnote_block
+    } else {
+      footnote_block
+    }
   }
 
   doc

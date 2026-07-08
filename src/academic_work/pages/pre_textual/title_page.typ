@@ -130,7 +130,7 @@
 
         // Advisors
         #align(start)[
-          #set par(first-line-indent: 0pt)
+          #set par(first-line-indent: 0cm)
           #print_advisors(advisors: advisors)
         ]
 

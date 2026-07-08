@@ -11,7 +11,7 @@
 // ## Style. Estilo.
 #let color_of_fill_of_notes = oklch(100%, 0, 90deg)
 #let paint_of_stroke_of_notes = oklch(80.78%, 0, 0deg)
-#let thickness_of_stroke_of_notes = 1.5pt
+#let thickness_of_stroke_of_notes = 0.125em
 
 #let handle_stroke = stroke_definition => {
   let converted_stroke = stroke(stroke_definition)
@@ -109,12 +109,14 @@
     none
   }
   if (fill_of_prefix == none) {
-    fill_of_prefix = fill_of_note.mix(color.luma(95%))
+    fill_of_prefix = fill_of_note.mix(
+      color.luma(95%),
+    )
   }
 
   box(
     fill: fill_of_prefix,
-    inset: 6pt,
+    inset: 0.5em,
     prefix.body,
   )
 }
@@ -152,12 +154,12 @@
     set text(
       font: font_family_for_notes_state.get(),
     )
-    set par(first-line-indent: 0pt)
+    set par(first-line-indent: 0cm)
     block(
       breakable: false,
       clip: true,
       fill: fill,
-      radius: 6pt,
+      radius: 0.5em,
       stroke: stroke,
 
       grid(
@@ -200,7 +202,7 @@
         },
 
         block(
-          inset: 6pt,
+          inset: 0.5em,
           it,
         ),
       ),

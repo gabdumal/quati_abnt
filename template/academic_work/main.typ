@@ -23,9 +23,6 @@
 #show: it => quati-abnt.bibliography.template(
   it,
 )
-#show: it => quati-abnt.footnote.template(
-  it,
-)
 #show: it => quati-abnt.note.template(
   it,
   // Define the font family.
@@ -37,6 +34,10 @@
 )
 #show: it => quati-abnt.academic_work.template(
   it,
+
+  // Define the font size for common text.
+  // Defina o tamanho de fonte para o texto comum.
+  base_font_size: quati-abnt.common.style.base_font_size,
 
   // Define the font family to be used on each context.
   // Defina a família tipográfica a ser utilizada em cada contexto.
@@ -56,6 +57,12 @@
   // Define whether to count pages and place its numbers at the headers.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
+)
+#show: it => quati-abnt.footnote.template(
+  it,
+  // Define the font size for common text.
+  // Defina o tamanho de fonte para o texto comum.
+  base_font_size: quati-abnt.common.style.base_font_size,
 )
 
 

@@ -158,7 +158,7 @@
 // Se não houver alguma epígrafe a fazer, você pode apenas remover o bloco a seguir.
 
 #{
-  set par(first-line-indent: 0pt)
+  set par(first-line-indent: 0cm)
   include_epigraph_page(
     quote(
       attribution: [@dumont:1918:o_que_eu_vi_o_que_nos_veremos[p. 15].],
