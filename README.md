@@ -54,7 +54,6 @@ This file initializes the template, offering options to configure it.
   color_of_links: quati-abnt.link.color_of_links,
 )
 #show: it => quati-abnt.bibliography.template(it)
-#show: it => quati-abnt.footnote.template(it)
 #show: it => quati-abnt.note.template(
   it,
   // Define the font family.
@@ -82,6 +81,7 @@ This file initializes the template, offering options to configure it.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
 )
+#show: it => quati-abnt.footnote.template(it)
 ```
 
 ### Packages

@@ -50,12 +50,7 @@
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
 )
-#show: it => quati-abnt.footnote.template(
-  it,
-  // Define the font size for common text.
-  // Defina o tamanho de fonte para o texto comum.
-  base_font_size: quati-abnt.common.style.base_font_size,
-)
+#show: it => quati-abnt.footnote.template(it)
 
 
 // ## Content. Conteúdo.

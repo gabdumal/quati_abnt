@@ -10,10 +10,6 @@
 // ## Template. Modelo.
 #let template(
   doc,
-  //
-  // Base font size.
-  base_font_size: none,
-  //
 ) = {
   set footnote.entry(
     gap: simple_leading_for_smaller_text,
@@ -46,11 +42,14 @@
       ),
     )
 
-    if base_font_size != none {
-      set text(size: base_font_size_state.get())
+    // If the user is using a common template that defines a base font size, adjust the footnotes to follow the same value
+    let value_of_base_font_size_state = base_font_size_state.get()
+    if value_of_base_font_size_state != none {
+      set text(size: value_of_base_font_size_state)
       set text(size: font_size_for_smaller_text)
       footnote_block
     } else {
+      set text(size: font_size_for_smaller_text)
       footnote_block
     }
   }
