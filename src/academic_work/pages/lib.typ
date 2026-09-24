@@ -1,6 +1,7 @@
 // # Pages. Páginas.
 
 #import "./external/cover.typ": include_cover
+
 #import "./pre_textual/abstract.typ": include_abstract_page
 #import "./pre_textual/acknowledgments.typ": include_acknowledgments_page
 #import "./pre_textual/approval_page.typ": include_approval_page
@@ -15,4 +16,5 @@
 #import "./pre_textual/list_of_tables.typ": include_list_of_tables_page
 #import "./pre_textual/outline.typ": include_outline_page
 #import "./pre_textual/title_page.typ": include_title_page
+
 #import "./post_textual/glossary.typ": include_glossary_page

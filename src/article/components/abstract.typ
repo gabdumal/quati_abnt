@@ -1,7 +1,7 @@
 // # Abstract. Resumo.
 
 #import "../../common/components/abstract.typ": include_abstract
-#import "../../common/style/style.typ": leading_for_common_text
+#import "../../common/style.typ": leading_for_common_text
 
 #let include_abstracts = (
   abstracts: (

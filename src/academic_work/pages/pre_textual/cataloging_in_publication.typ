@@ -4,7 +4,7 @@
 #import "../../../common/components/font_family.typ": font_family_for_highlighted_text_state
 #import "../../../common/components/text.typ": capitalize_first_letter
 #import "../../../common/components/title.typ": print_title
-#import "../../../common/style/style.typ": font_size_for_smaller_text, simple_leading_for_smaller_text
+#import "../../../common/style.typ": font_size_for_smaller_text, simple_leading_for_smaller_text
 #import "../../components/advisors.typ": get_advisor_role
 #import "../../components/heading.typ": not_start_on_new_page
 #import "../../components/page.typ": (

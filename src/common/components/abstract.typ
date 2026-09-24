@@ -1,7 +1,7 @@
 // # Abstract. Resumo.
 // NBR 14724:2024 4.2.1.7, NBR 14724:2024 4.2.1.8
 
-#import "../style/style.typ": leading_for_common_text
+#import "../style.typ": leading_for_common_text
 
 #let include_abstract = (
   keywords_title: { "Palavras-chave" },

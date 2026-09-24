@@ -5,11 +5,11 @@
   font_family_for_common_text_state, font_family_for_highlighted_text_state,
 )
 #import "../../common/components/title.typ": print_title
-#import "../../common/style/style.typ": (
+#import "../../common/style.typ": (
   font_size_for_common_text, font_size_for_larger_text, leading_for_common_text, leading_for_larger_text,
   spacing_for_common_text, spacing_for_larger_text,
 )
-#import "../../common/template.typ": should_use_larger_text_to_highlight_state
+#import "../../common/template.typ": should_use_larger_text_instead_of_uppercase_to_highlight_state
 #import "./people.typ": print_people
 
 #let include_opening = (
@@ -35,17 +35,17 @@
     font: font_family_for_highlighted_text_state.get(),
   )
   set par(
-    first-line-indent: 0pt,
+    first-line-indent: 0cm,
   )
 
   align(center)[
-    #let should_use_larger_text_to_highlight = should_use_larger_text_to_highlight_state.get()
+    #let should_use_larger_text_instead_of_uppercase_to_highlight = should_use_larger_text_instead_of_uppercase_to_highlight_state.get()
 
     #let size = font_size_for_common_text
     #let leading = leading_for_common_text
     #let spacing = spacing_for_common_text
 
-    #if should_use_larger_text_to_highlight {
+    #if should_use_larger_text_instead_of_uppercase_to_highlight {
       size = font_size_for_larger_text
       leading = leading_for_larger_text
       spacing = spacing_for_common_text

@@ -1,5 +1,5 @@
 #import "../common/components/font_family.typ": font_family_math, font_family_mono, font_family_sans, font_family_serif
-#import "../common/style/style.typ": margin_bottom, margin_end, margin_start, margin_top, paper_size
+#import "../common/style.typ": base_font_size, margin_bottom, margin_end, margin_start, margin_top, paper_size
 #import "../common/template.typ": template as common_template
 #import "./components/heading.typ": format_heading
 #import "./components/page.typ": format_header, should_consider_only_odd_pages as should_consider_only_odd_pages_state
@@ -7,27 +7,23 @@
 #let template(
   doc,
   //
-  // Color to format links.
-  color_of_links: none,
+  // Font size.
+  base_font_size: base_font_size,
   //
   // Font families.
   font_family_for_common_text: font_family_serif,
   font_family_for_highlighted_text: font_family_sans,
   font_family_for_math_text: font_family_math,
   font_family_for_monospaced_text: font_family_mono,
-  font_family_for_editor_notes: font_family_sans,
   //
   // Whether to use uppercase as typographic highlight.
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
   //
   // Whether to print content on the back of pages.
   should_consider_only_odd_pages: true,
   //
   // Whether to number pages and print its number on the header.
   should_number_pages: false,
-  //
-  // Whether to display editor notes.
-  should_display_editor_notes: true,
 ) = {
   should_consider_only_odd_pages_state.update(should_consider_only_odd_pages)
 
@@ -68,20 +64,18 @@
   // ### Format. Formatação.
   show heading: it => {
     format_heading(
-      should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
+      should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
       it,
     )
   }
 
   common_template(
     doc,
-    color_of_links: color_of_links,
+    base_font_size: base_font_size,
     font_family_for_common_text: font_family_for_common_text,
     font_family_for_highlighted_text: font_family_for_highlighted_text,
     font_family_for_math_text: font_family_for_math_text,
     font_family_for_monospaced_text: font_family_for_monospaced_text,
-    font_family_for_editor_notes: font_family_for_editor_notes,
-    should_use_larger_text_to_highlight: should_use_larger_text_to_highlight,
-    should_display_editor_notes: should_display_editor_notes,
+    should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
   )
 }

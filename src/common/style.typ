@@ -25,10 +25,12 @@
 
 // ## Font size. Tamanho da fonte.
 // NBR 14724:2024 5.1, NBR 6022:2018 6.1.
-#let font_size_for_larger_text = 13pt
-#let font_size_for_common_text = 12pt
+#let base_font_size = 12pt
+//
+#let font_size_for_larger_text = 1.083333em
+#let font_size_for_common_text = 1em
 // Smaller text must be used for: quotations with more than 3 lines, footnotes, page numbering, cataloging-in-publication, references and information of figures and tables.
-#let font_size_for_smaller_text = 11pt
+#let font_size_for_smaller_text = 0.916667em
 
 // ## Spacing. Espaçamento.
 // NBR 14724:2024 5.2, NBR 6022:2018 6.1.
@@ -45,11 +47,6 @@
 // ### Smaller text. Texto menor.
 // Spacing of 1 must be used for: quotations with more than 3 lines, footnotes, nature, references and information of figures and tables. We interpret that nature should also use this leading.
 #let simple_spacing_for_smaller_text = font_size_for_smaller_text * spacing_of_one
-//
-// ### Bibliography. Bibliografia.
-// NBR 6023:2025 6.3.
-// There must be a blank space of 1 simple line between bibliography entries.
-#let spacing_for_bibliography = font_size_for_common_text * spacing_of_one * 2
 
 // ## Leading. Entrelinha.
 // NBR 14724:2024 5.2.
@@ -66,14 +63,7 @@
 // ### Smaller text. Texto menor.
 // Leading of 1 must be used for: quotations with more than 3 lines, footnotes, nature, references and information of figures and tables. We interpret that nature should also use this leading.
 #let simple_leading_for_smaller_text = font_size_for_smaller_text * leading_of_one
-//
-// ### Bibliography. Bibliografia.
-// NBR 6023:2025 6.3.
-// Leading of 1 must be used for bibliography.
-#let leading_for_bibliography = font_size_for_common_text * leading_of_one
+
 
 // ## Figures. Figuras.
 #let spacing_around_figure = spacing_for_common_text
-
-// ## Links. Ligações.
-#let color_of_links = oklch(15%, 0.17, 264.05deg)

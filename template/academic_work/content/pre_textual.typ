@@ -143,7 +143,7 @@
 // Se não houver algum agradecimento a fazer, você pode apenas remover o bloco a seguir.
 
 #include_acknowledgments_page()[
-  Agradecemos ao Grupo de Educação Tutorial em Sistemas de Informação (GetSi) da Universidade Federal de Juiz de Fora (UFJF) por prover bolsas de graduação que possibilitaram a realização deste trabalho.
+  Agradecemos ao Grupo de Educação Tutorial em Sistemas de Informação (GetSi) da Universidade Federal de Juiz de Fora (UFJF) por prover bolsas de apoio na graduação que possibilitaram a realização deste trabalho.
 ]
 
 // ====================
@@ -158,7 +158,7 @@
 // Se não houver alguma epígrafe a fazer, você pode apenas remover o bloco a seguir.
 
 #{
-  set par(first-line-indent: 0pt)
+  set par(first-line-indent: 0cm)
   include_epigraph_page(
     quote(
       attribution: [@dumont:1918:o_que_eu_vi_o_que_nos_veremos[p. 15].],

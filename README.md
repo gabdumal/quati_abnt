@@ -6,13 +6,13 @@ Compose documents according to ABNT standards.
 
 In order to create a new project using this template, you can either:
 
-- use the following command when running typst **locally**;
+- select [this template](https://typst.app/universe/package/quati-abnt) on the Typst **web app**;
+
+- or use the following command when running typst **locally**.
 
 ```bash
-typst init @preview/quati-abnt:0.1.0
+typst init @preview/quati-abnt:0.2.0
 ```
-
-- or select [this template](https://typst.app/universe/package/quati-abnt) on the Typst **web app**.
 
 This will create two folders: `article`, intended for scientific papers, and `academic_work`, intended for dissertations, theses, and monographs.
 
@@ -33,7 +33,7 @@ After that, select the `main.typ` file on the **desired template** to render the
 On the `/packages.typ` file inside each template folder, you will find the importing of the `quati-abnt` package.
 
 ```typst
-#import "@preview/quati-abnt:0.1.0" as quati-abnt
+#import "@preview/quati-abnt:0.2.0" as quati-abnt
 ```
 
 ## Paper template
@@ -47,12 +47,24 @@ To render the paper, select the `/main.typ` file.
 This file initializes the template, offering options to configure it.
 
 ```typst
-#show: it => quati-abnt.article.template(
+#show: it => quati-abnt.link.template(
   it,
-
   // Define the color of links and cross-references.
   // Defina a cor dos links e das referências cruzadas.
-  color_of_links: quati-abnt.common.style.color_of_links,
+  color_of_links: quati-abnt.link.color_of_links,
+)
+#show: it => quati-abnt.bibliography.template(it)
+#show: it => quati-abnt.note.template(
+  it,
+  // Define the font family.
+  // Defina a família tipográfica.
+  font_family_for_notes: quati-abnt.common.style.font_family_sans,
+  // Define whether to display editor notes.
+  // Defina se deve exibir as notas de editor.
+  should_display_notes: true,
+)
+#show: it => quati-abnt.article.template(
+  it,
 
   // Define the font family to be used on each context.
   // Defina a família tipográfica a ser utilizada em cada contexto.
@@ -60,20 +72,16 @@ This file initializes the template, offering options to configure it.
   font_family_for_highlighted_text: quati-abnt.common.style.font_family_sans,
   font_family_for_math_text: quati-abnt.common.style.font_family_math,
   font_family_for_monospaced_text: quati-abnt.common.style.font_family_mono,
-  font_family_for_editor_notes: quati-abnt.common.style.font_family_sans,
 
   // Define whether to use larger text as typographic highlight instead of uppercase.
   // Defina se deve ser utilizada uma fonte maior como destaque tipográfico em vez de caixa-alta.
-  should_use_larger_text_to_highlight: false,
+  should_use_larger_text_instead_of_uppercase_to_highlight: false,
 
   // Define whether to count pages and place its numbers at the headers.
   // Defina se deve contar as páginas e exibir seus números nos cabeçalhos.
   should_number_pages: true,
-
-  // Define whether to display editor notes.
-  // Defina se deve exibir as notas de editor.
-  should_display_editor_notes: true,
 )
+#show: it => quati-abnt.footnote.template(it)
 ```
 
 ### Packages

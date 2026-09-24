@@ -1,9 +1,7 @@
 // # Tables. Tabelas.
 // NBR 14724:2024 5.9, IBGE Apresentação tabular 1993
 
-#import "../style/style.typ": (
-  font_size_for_smaller_text, simple_leading_for_smaller_text, simple_spacing_for_smaller_text,
-)
+#import "../style.typ": font_size_for_smaller_text, simple_leading_for_smaller_text, simple_spacing_for_smaller_text
 
 #let format_table(body) = {
   // IBGE Apresentação tabular 1993 4.3.3

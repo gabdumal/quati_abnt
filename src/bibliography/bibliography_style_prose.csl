@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-    Estilo CSL — ABNT
+    Estilo CSL — ABNT (variante para citações em prosa)
     NBR 6023:2025 (referências bibliográficas)
     NBR 10520:2023 (citações em documentos)
     Sistema: autor-data
 
-    Para citações em prosa ("Silva, Souza e Oliveira (2023)"), use o arquivo
-    bibliography_style_prose.csl em conjunto com cite(form: "prose") no Typst.
+    Este arquivo é idêntico a bibliography_style.csl com uma única diferença:
+    a macro names-citation usa and="text" e delimiter=", " para gerar o formato
+    "Silva, Souza e Oliveira (2023)" em vez de "Silva; Souza; Oliveira (2023)".
+
+    Uso no Typst (via cite_prose):
+        cite(key, form: "prose", style: "../style/bibliography_style_prose.csl")
 -->
 
 <!--
@@ -29,10 +33,10 @@
         ============================================================ -->
 
     <info>
-        <title>ABNT — NBR 6023:2025 (Português - Brasil)</title>
-        <title-short>ABNT</title-short>
-        <id>https://gabdumal.com/csl/abnt-nbr6023-2025</id>
-        <link href="https://gabdumal.com/csl/abnt-nbr6023-2025" rel="self" />
+        <title>ABNT — NBR 6023:2025 — Prosa (Português - Brasil)</title>
+        <title-short>ABNT Prosa</title-short>
+        <id>https://gabdumal.com/csl/abnt-nbr6023-2025-prose</id>
+        <link href="https://gabdumal.com/csl/abnt-nbr6023-2025-prose" rel="self" />
 
         <!-- Autores do estilo-base original (Zotero ABNT). -->
         <contributor>
@@ -83,9 +87,9 @@
         <category citation-format="author-date" />
         <category field="generic-base" />
 
-        <summary>Estilo ABNT conforme NBR 10520:2023 (citações) e NBR 6023:2025
-            (referências). Sistema autor-data. Para citações em prosa, use
-            bibliography_style_prose.csl com cite(form: "prose") no Typst.</summary>
+        <summary>Variante do estilo ABNT para citações em prosa: "Silva, Souza e
+            Oliveira (2023)". Use com cite(form: "prose") no Typst. Para citações
+            parentéticas, use bibliography_style.csl.</summary>
 
         <updated>2026-03-03T00:00:00+00:00</updated>
 
@@ -172,8 +176,8 @@
     </macro>
 
     <!--
-        `names-citation`: autores para citação parentética no corpo do texto.
-        Formato: Sobrenome; Sobrenome2 — NBR 10520:2023.
+        `names-citation` (variante prosa): autores para citação narrativa.
+        Formato: "Silva, Souza e Oliveira" — NBR 10520:2023 6.1.
         A partir de 4 autores: primeiro + et al. (itálico), conforme <citation>.
         Fallback: editor → tradutor → título.
     -->
@@ -181,15 +185,11 @@
         <names variable="author">
             <name
                 form="short"
-                name-as-sort-order="all"
-                sort-separator=", "
-                initialize="false"
-                initialize-with=". "
-                delimiter="; "
-                delimiter-precedes-last="always"
+                and="text"
+                delimiter=", "
+                delimiter-precedes-last="never"
             >
                 <name-part name="family" text-case="capitalize-first" />
-                <name-part name="given" />
             </name>
             <et-al font-style="italic" />
             <substitute>
@@ -547,7 +547,7 @@
 
     <!--
         `citation-locator`: localizador usado na citação (página, seção etc.).
-        Sufixo da citação parentética: (Autor, Ano, p. N).
+        Sufixo da citação em prosa: Silva (2023, p. N).
     -->
     <macro name="citation-locator">
         <group>
@@ -557,9 +557,9 @@
     </macro>
 
     <!-- ============================================================
-        CITAÇÃO PARENTÉTICA — NBR 10520:2023.
+        CITAÇÃO EM PROSA — NBR 10520:2023.
+        Formato: Silva, Souza e Oliveira (2023, p. N)
         A partir de 4 autores: exibe apenas o primeiro + et al. (itálico).
-        Ordenação: sobrenome do primeiro autor, depois ano.
         ============================================================ -->
 
     <citation
@@ -572,12 +572,14 @@
             <key macro="names-bibliography" />
             <key variable="issued" />
         </sort>
-        <layout prefix="(" suffix=")" delimiter="; ">
+        <layout prefix="" suffix="" delimiter="; ">
             <group>
-                <text macro="names-citation" suffix=", " />
-                <text macro="date-year" />
-                <text variable="year-suffix" />
-                <text macro="citation-locator" prefix=", " />
+                <text macro="names-citation" />
+                <group prefix="(" suffix=")">
+                    <text macro="date-year" />
+                    <text variable="year-suffix" />
+                    <text macro="citation-locator" prefix=", " />
+                </group>
             </group>
         </layout>
     </citation>
@@ -745,9 +747,9 @@
                     <text macro="names-bibliography" suffix=". " />
                     <text macro="title" suffix=". " />
                     <text macro="event-proceedings" />
-                    <text macro="publisher" suffix=". " />
-                    <text macro="locators" suffix=". " />
-                    <text macro="doi" suffix=". " />
+                    <text macro="publisher" />
+                    <text macro="locators" prefix=", " />
+                    <text macro="doi" prefix=". " suffix=". " />
                     <text macro="access" />
                 </else-if>
 
