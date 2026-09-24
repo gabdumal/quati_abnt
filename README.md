@@ -11,7 +11,7 @@ In order to create a new project using this template, you can either:
 - or use the following command when running typst **locally**.
 
 ```bash
-typst init @preview/quati-abnt:0.1.1
+typst init @preview/quati-abnt:0.2.0
 ```
 
 This will create two folders: `article`, intended for scientific papers, and `academic_work`, intended for dissertations, theses, and monographs.
@@ -33,7 +33,7 @@ After that, select the `main.typ` file on the **desired template** to render the
 On the `/packages.typ` file inside each template folder, you will find the importing of the `quati-abnt` package.
 
 ```typst
-#import "@preview/quati-abnt:0.1.1" as quati-abnt
+#import "@preview/quati-abnt:0.2.0" as quati-abnt
 ```
 
 ## Paper template
