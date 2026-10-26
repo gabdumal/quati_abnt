@@ -22,7 +22,7 @@ On Visual Studio Code, open the `Open a Remote Window` menu, and select `Reopen 
 Open the terminal inside the container, and run the following command to install the package.
 
 ```bash
-utpm workspace link --no-copy --force
+utpm project link --no-copy --force
 ```
 
 ## Usage

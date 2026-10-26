@@ -748,7 +748,7 @@
                     <text macro="publisher" />
                     <text macro="locators" prefix=", " />
                     <text macro="doi" prefix=". " suffix=". " />
-                    <text macro="access" />
+                    <text macro="access" prefix=". " />
                 </else-if>
 
                 <!--
