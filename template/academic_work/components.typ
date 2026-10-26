@@ -1,7 +1,7 @@
 // # Components. Componentes.
 
-#import "./data/terms.typ": get_term
-#import "./packages.typ": (
+#import "data/terms.typ": get_term
+#import "packages.typ": (
   quati-abnt, quati-abnt.academic_work.components.include_epigraph, quati-abnt.academic_work.components.print_people,
   quati-abnt.academic_work.components.print_person, quati-abnt.bibliography.cite_prose,
   quati-abnt.common.components.describe_figure, quati-abnt.common.components.equation,

@@ -92,7 +92,7 @@ This template depends on these packages, which are already re-exported to your p
 ### Components
 
 You can define your own components on the `/components.typ` file.
-We have already set some exemples of editor notes for you to edit.
+We have already set some examples of editor notes for you to edit.
 
 ```typst
 #let note_from_alice = (
@@ -162,7 +162,7 @@ Feel free to create more files and folders to organize your content, if you want
 You can include those files on the `/content/textual/main.typ` file using the `#include` command.
 
 ```typst
-#include "./introduction.typ"
+#include "introduction.typ"
 ```
 
 ### Post-textual elements
@@ -220,7 +220,7 @@ Feel free to create more files and folders to organize your content, if you want
 You can include those files on the `/content/textual/main.typ` file using the `#include` command.
 
 ```typst
-#include "./introduction.typ"
+#include "introduction.typ"
 ```
 
 Its usual for a monograph to have these chapters:
@@ -234,3 +234,9 @@ Its usual for a monograph to have these chapters:
 ### Post-textual elements
 
 On the `/content/post_textual.typ` file, you can set the appendices and annexes.
+
+## Instructions
+
+You can learn about Typst and about this template by reading the **guide** accessed by <https://typst.gabdumal.com/>.
+
+Specifically, the **chapter** that explains about this template is this one: <https://typst.gabdumal.com/scholar/>.

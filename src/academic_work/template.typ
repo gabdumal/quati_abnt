@@ -1,8 +1,8 @@
 #import "../common/components/font_family.typ": font_family_math, font_family_mono, font_family_sans, font_family_serif
 #import "../common/style.typ": base_font_size, margin_bottom, margin_end, margin_start, margin_top, paper_size
 #import "../common/template.typ": template as common_template
-#import "./components/heading.typ": format_heading
-#import "./components/page.typ": format_header, should_consider_only_odd_pages as should_consider_only_odd_pages_state
+#import "components/heading.typ": format_heading
+#import "components/page.typ": format_header, should_consider_only_odd_pages as should_consider_only_odd_pages_state
 
 #let template(
   doc,

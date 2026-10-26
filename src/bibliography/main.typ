@@ -25,7 +25,7 @@
   cite(
     form: "prose",
     supplement: supplement,
-    style: "./bibliography_style_prose.csl",
+    style: "bibliography_style_prose.csl",
     key,
   )
 }
@@ -37,7 +37,7 @@
 ) = {
   set bibliography(
     // The bibliography should be formatted according to the ABNT style
-    style: "./bibliography_style.csl",
+    style: "bibliography_style.csl",
     title: "Referências",
   )
   show bibliography: it => format_bibliography(it)

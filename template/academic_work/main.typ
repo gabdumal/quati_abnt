@@ -1,9 +1,9 @@
 // # Academic Work. Trabalho Acadêmico.
 // NBR 14724:2024
 
-#import "./components.typ": *
-#import "./data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
-#import "./packages.typ": *
+#import "components.typ": *
+#import "data/glossary.typ": abbreviations_entries, glossary_entries, symbols_entries
+#import "packages.typ": *
 
 
 // ## Glossary. Glossário.
@@ -62,16 +62,16 @@
 // ## Content. Conteúdo.
 
 // ### External elements. Elementos externos.
-#include "./content/external.typ"
+#include "content/external.typ"
 
 // ### Pre-textual elements. Elementos pré-textuais.
-#include "./content/pre_textual.typ"
+#include "content/pre_textual.typ"
 
 // ### Textual elements. Elementos textuais.
-#include "./content/textual/main.typ"
+#include "content/textual/main.typ"
 
 // ### Bibliography. Referências.
-#bibliography("./data/bibliography.bib")
+#bibliography("data/bibliography.bib")
 
 // ### Post-textual elements. Elementos pós-textuais.
-#include "./content/post_textual.typ"
+#include "content/post_textual.typ"

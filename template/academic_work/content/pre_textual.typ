@@ -17,7 +17,7 @@
   quati-abnt.academic_work.pages.include_list_of_tables_page, quati-abnt.academic_work.pages.include_outline_page,
   quati-abnt.academic_work.pages.include_title_page,
 )
-#import "./abstract.typ": abstract_in_main_language
+#import "abstract.typ": abstract_in_main_language
 
 #let keywords_in_main_language = abstract_in_main_language.keywords
 

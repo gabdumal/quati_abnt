@@ -27,7 +27,7 @@
 
 #let print_people(
   people: (),
-  joiner: linebreak(),
+  joiner: ", ",
 ) = {
   (
     people

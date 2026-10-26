@@ -38,7 +38,7 @@
         lang: "en",
         region: "us",
       )[
-        This exemple presents the use of the `quati-abnt`, a paper template for Typst according to the #glossarium.gls("nbr", plural: true, display: "Brazilian Norms (NBRs)") from the #glossarium.gls("abnt", display: "Brazilian Association of Technical Norms (ABNT)").
+        This example presents the use of the `quati-abnt`, a paper template for Typst according to the #glossarium.gls("nbr", plural: true, display: "Brazilian Norms (NBRs)") from the #glossarium.gls("abnt", display: "Brazilian Association of Technical Norms (ABNT)").
       ]
     ],
   )

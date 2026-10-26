@@ -1,13 +1,13 @@
 // # Template. Modelo.
 
-#import "./components/figure.typ": figure_with_spacing_around
-#import "./components/font_family.typ": (
+#import "components/figure.typ": figure_with_spacing_around
+#import "components/font_family.typ": (
   base_font_size_state, font_family_for_common_text_state, font_family_for_highlighted_text_state,
   font_family_for_math_text_state, font_family_for_monospaced_text_state, font_family_math, font_family_mono,
   font_family_sans, font_family_serif,
 )
-#import "./components/heading.typ": format_heading
-#import "./components/quote.typ": format_quote
+#import "components/heading.typ": format_heading
+#import "components/quote.typ": format_quote
 #import "style.typ": (
   base_font_size, indentation_for_paragraphs, indentation_for_subparagraphs, leading_for_common_text, paper_size,
   simple_leading_for_smaller_text, simple_spacing_for_smaller_text, spacing_for_common_text,
@@ -63,6 +63,9 @@
   )
   show math.equation: set text(
     font: font_family_for_math_text,
+  )
+  show heading: set text(
+    size: base_font_size,
   )
 
   // ## Paragraphs. Parágrafos.

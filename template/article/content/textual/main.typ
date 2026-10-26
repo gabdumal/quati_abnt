@@ -32,7 +32,7 @@ Esta é a @seção:introdução, de introdução.
       ],
       image(
         width: 4.57cm,
-        "./../../assets/images/black_square.png",
+        "../../assets/images/black_square.png",
       ),
     )<figura:quadrado_preto>
   ],

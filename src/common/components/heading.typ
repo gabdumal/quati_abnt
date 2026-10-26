@@ -25,16 +25,16 @@
     font_weight = "bold"
     if should_use_larger_text_instead_of_uppercase_to_highlight {
       font_size = font_size_for_larger_text
-      let leading = leading_for_larger_text
-      let spacing = spacing_for_larger_text
+      leading = leading_for_larger_text
+      spacing = spacing_for_larger_text
     } else {
       should_capitalize = true
     }
   } else if body.level == 2 {
     if should_use_larger_text_instead_of_uppercase_to_highlight {
       font_size = font_size_for_larger_text
-      let leading = leading_for_larger_text
-      let spacing = spacing_for_larger_text
+      leading = leading_for_larger_text
+      spacing = spacing_for_larger_text
     } else {
       should_capitalize = true
     }
@@ -91,6 +91,7 @@
     should_use_larger_text_instead_of_uppercase_to_highlight: should_use_larger_text_instead_of_uppercase_to_highlight,
     body,
   )
+
   let text_before_numbering = none
   let text_after_numbering = none
   let column_gutter = measure(sym.dash).width

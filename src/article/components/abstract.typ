@@ -21,6 +21,5 @@
 ) => {
   for abstract in abstracts {
     include_abstract(..abstract)
-    v(leading_for_common_text * 2)
   }
 }

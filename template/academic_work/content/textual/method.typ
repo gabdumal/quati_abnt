@@ -98,7 +98,7 @@ Ela é importada por meio do caminho relativo `./../../assets/images/black_squar
   image(
     width: 10cm,
     height: 5cm,
-    "./../../assets/images/black_square.png",
+    "../../assets/images/black_square.png",
   ),
 )
 
@@ -120,7 +120,7 @@ Essa também é uma referência para a @figura:quadrado_preto_sem_fonte.
     Quadrado preto
   ],
   image(
-    "./../../assets/images/black_square.png",
+    "../../assets/images/black_square.png",
   ),
 )<figura:quadrado_preto_sem_fonte>
 
@@ -312,7 +312,7 @@ esta é a terceira sub-ilustração: @figura:terceira_sub-figura.
             caption: [
               #lorem(5)
             ],
-            image("./../../assets/images/black_square.png", width: 5cm),
+            image("../../assets/images/black_square.png", width: 5cm),
           )<figura:primeira_sub-figura>
         ],
 
@@ -321,7 +321,7 @@ esta é a terceira sub-ilustração: @figura:terceira_sub-figura.
             caption: [
               #lorem(10)
             ],
-            image("./../../assets/images/black_square.png", width: 5cm),
+            image("../../assets/images/black_square.png", width: 5cm),
           )<figura:segunda_sub-figura>
         ],
 
@@ -330,7 +330,7 @@ esta é a terceira sub-ilustração: @figura:terceira_sub-figura.
             caption: [
               #lorem(15)
             ],
-            image("./../../assets/images/black_square.png", width: 10cm),
+            image("../../assets/images/black_square.png", width: 10cm),
           )<figura:terceira_sub-figura>
         ],
       )
@@ -358,7 +358,7 @@ A @figura:quadrado_preto apresenta uma imagem importada do arquivo `./../../asse
       ],
       image(
         width: 10cm,
-        "./../../assets/images/black_square.png",
+        "../../assets/images/black_square.png",
       ),
     )<figura:quadrado_preto>
   ],

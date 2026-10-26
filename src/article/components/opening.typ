@@ -10,7 +10,7 @@
   spacing_for_common_text, spacing_for_larger_text,
 )
 #import "../../common/template.typ": should_use_larger_text_instead_of_uppercase_to_highlight_state
-#import "./people.typ": print_people
+#import "people.typ": print_people
 
 #let include_opening = (
   authors: {

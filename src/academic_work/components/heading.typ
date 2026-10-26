@@ -1,7 +1,7 @@
 // # Headings. Títulos.
 
 #import "../../common/components/heading.typ": format_heading as format_heading_from_common
-#import "./page.typ": should_consider_only_odd_pages
+#import "page.typ": should_consider_only_odd_pages
 
 #let should_start_on_new_page = state(
   "should_start_on_new_page",
